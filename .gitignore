@@ -3,3 +3,5 @@
 *.swp
 *.swo
 *.sassc
+.sass-cache
+.sass-cache/*
