@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 @page { /* defining overall trim size and page layout */
   size: 5.5in 8.5in; /* width, heigth */
   margin: 54pt 0.75in 54pt 0.75in; /* white space around the page */
@@ -76,7 +75,7 @@ h1 + p, h2 + p, h3 + P {
 }
 
 p, dd { /* general text styles */
-  font-family: 'Crimson-Roman', serif;
+  font-family: 'OpenSans-Regular', sans-serif;
   text-indent: 0.167in;
   font-size: 11pt;
   line-height: 14pt;
@@ -163,7 +162,7 @@ section[data-type="titlepage"] p:first-of-type {
 }
 
 section[data-type="titlepage"] p {
-  font-family: 'Crimson-Roman', serif;
+  font-family: 'OpenSans-Regular', sans-serif;
   font-size: 13pt;
   line-height: 16pt;
   margin-top: 0pt;
@@ -185,7 +184,7 @@ section[data-type="copyright-page"] h1 { /* book title */
 }
 
 section[data-type="copyright-page"] p {
-  font-family: 'Crimson-Roman', serif;
+  font-family: 'OpenSans-Regular', sans-serif;
   font-size: 10pt;
   margin: 6pt 0 6pt 0;
   text-indent: 0;
@@ -194,7 +193,7 @@ section[data-type="copyright-page"] p {
 /* dedication */
 
 section[data-type="dedication"] {
-  font-family: 'Crimson-Italic', serif;
+  font-family: 'Crimson-Italic', sans-serif;
   font-style: italic;
   page: blank;
   page-break-after: always;
@@ -244,7 +243,7 @@ section[data-type="dedication"] {
 
 nav[data-type="toc"] li[data-type="preface"] a:after, 
 nav[data-type="toc"] li[data-type="foreword"] a:after {
-  font-family: 'Crimson-Semibold', serif;
+  font-family: 'Crimson-Semibold', sans-serif;
   font-style: normal;
   content: leader(" ") target-counter(attr(href, url), page, lower-roman);
 }
@@ -291,14 +290,14 @@ nav[data-type="toc"] li[data-type="preface"] a,
 nav[data-type="toc"] li[data-type="foreword"] a, 
 nav[data-type="toc"] li[data-type="glossary"] a, 
 nav[data-type="toc"] li[data-type="index"] a {
-  font-family: 'Crimson-SemiboldItalic', serif;
+  font-family: 'Crimson-SemiboldItalic', sans-serif;
   font-style: italic;
 }
 
 nav[data-type="toc"] li[data-type="chapter"] li a:after, 
 nav[data-type="toc"] li[data-type="appendix"] li a:after, 
 nav[data-type="toc"] li[data-type="chapter"] ol {
-  font-family: 'Crimson-Roman', serif;
+  font-family: 'OpenSans-Regular', sans-serif;
 }
 
 nav[data-type="toc"] li[data-type="chapter"], 
@@ -657,7 +656,7 @@ ul, ol { /* bulleted and numbered lists */
 }
 
 ul li, ol li {
-  font-family: 'Crimson-Roman', serif;
+  font-family: 'OpenSans-Regular', sans-serif;
   font-size: 11pt;
   line-height: 14pt;
   margin-top: 3pt;
@@ -813,7 +812,7 @@ aside h5 { /* sidebar titles */
 }
 
 aside h6 { /* sidebar subtitles */
-  font-family: 'Crimson-Bold', serif;
+  font-family: 'Crimson-Bold', sans-serif;
   font-size: 9.5pt;
   line-height: 12pt;
 }
@@ -994,7 +993,7 @@ section[data-type="index"] ul li {
   padding: 0 0 0 0.17in;
   text-indent: -0.17in;
   font-size: 9pt;
-  font-family: 'Crimson-Roman', serif;
+  font-family: 'OpenSans-Regular', sans-serif;
 }
 
 div[data-type="indexdiv"] h3 {
@@ -1200,3 +1199,5 @@ section.abouttheauthor {
   bookmark-state: closed;
   bookmark-label: attr(data-pdf-bookmark); 
 }
+
+
