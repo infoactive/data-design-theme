@@ -129,11 +129,10 @@ h4
 section[data-type="titlepage"]
   h1
     font-family: 'source_sans_prosemibold', sans-serif
-    border-bottom: 1px solid #333
-    margin-top: 100px
-    padding-bottom: 10px
-    font-size: 2em
     line-height: 120%
+    padding-top: 2em
+    font-size: 5em
+    text-align: center
   h2
     font-size: 1.2em
     line-height: 120%
@@ -147,18 +146,8 @@ section[data-type="titlepage"]
     float: none
     text-indent: 0
 
-section[data-type="titlepage"] h2, 
-section[data-type="copyright-page"] h1
-  font-family: 'source_sans_prosemibold', sans-serif
-
 section[data-type="halftitlepage"]
   display: none
-
-section[data-type="titlepage"]
-  text-align: left
-  page-break-after: always
-  p:first-of-type
-    margin-top: 82pt
 
 nav[data-type="toc"]
   margin-top: 132px
@@ -441,7 +430,17 @@ section[data-type="acknowledgments"]
   height: 150px
   margin: 45px
 
-div[data-type="part"]
+section[data-type="titlepage"]
+  background: url("../../images/cover.png") bottom repeat-x $blue
+  min-height: 800px
+  a 
+    color: white
+    text-decoration: underline
+  h2
+    margin-bottom: 2em
+
+div[data-type="part"],
+section[data-type="titlepage"]
   width: 100%
   max-width: 100%
   margin: 0
@@ -451,23 +450,27 @@ div[data-type="part"]
   color: white
   .content
     padding: 4em 0 7em
-  header
-    padding: 80px 0 1.5em
   h1
-    text-transform: uppercase
-    font-size: 3em
-    max-width: 700px
-    margin: 0 auto
     top: 0px
-  p
-    text-align: justify
-    max-width: 700px
-    margin: 0 auto 1.5em
+    text-transform: uppercase
   + .navigation ul
     height: 3.5em
     position: fixed
     bottom: 0
     width: 100%
+  h1, h2, p
+    max-width: 700px
+    margin: 0 auto
+    text-align: center
+
+div[data-type="part"]
+  header
+    padding: 80px 0 1.5em
+  h1
+    font-size: 3em
+  p
+    text-align: justify
+    margin: 0 auto 1.5em
   img
     float: left
     margin-right: .5em
@@ -1070,13 +1073,18 @@ div.navbar p a
       @include span-columns(6)
       @include omega(2n)
 
-  div[data-type="part"] + .navigation
+  div[data-type="part"] + .navigation,
+  section[data-type="titleplage"] + .navigation
     position: absolute
     background: transparent
     border: none
     ul li
       bottom: 18px
       position: fixed
+
+section[data-type="titlepage"] + .navigation
+  ul
+    background: lighten(black, 40)
 
   .btn.open
     position: absolute

@@ -106,11 +106,10 @@ h4 {
 
 section[data-type="titlepage"] h1 {
   font-family: "source_sans_prosemibold", sans-serif;
-  border-bottom: 1px solid #333333;
-  margin-top: 100px;
-  padding-bottom: 10px;
-  font-size: 2em;
-  line-height: 120%; }
+  line-height: 120%;
+  padding-top: 2em;
+  font-size: 5em;
+  text-align: center; }
 section[data-type="titlepage"] h2 {
   font-size: 1.2em;
   line-height: 120%;
@@ -124,18 +123,8 @@ section[data-type="titlepage"] p {
   float: none;
   text-indent: 0; }
 
-section[data-type="titlepage"] h2,
-section[data-type="copyright-page"] h1 {
-  font-family: "source_sans_prosemibold", sans-serif; }
-
 section[data-type="halftitlepage"] {
   display: none; }
-
-section[data-type="titlepage"] {
-  text-align: left;
-  page-break-after: always; }
-  section[data-type="titlepage"] p:first-of-type {
-    margin-top: 82pt; }
 
 nav[data-type="toc"] {
   margin-top: 132px; }
@@ -444,7 +433,17 @@ section[data-type="acknowledgments"] .role {
   height: 150px;
   margin: 45px; }
 
-div[data-type="part"] {
+section[data-type="titlepage"] {
+  background: url("../../images/cover.png") bottom repeat-x #41a2ba;
+  min-height: 800px; }
+  section[data-type="titlepage"] a {
+    color: white;
+    text-decoration: underline; }
+  section[data-type="titlepage"] h2 {
+    margin-bottom: 2em; }
+
+div[data-type="part"],
+section[data-type="titlepage"] {
   width: 100%;
   max-width: 100%;
   margin: 0;
@@ -452,28 +451,37 @@ div[data-type="part"] {
   height: auto;
   min-height: 100%;
   color: white; }
-  div[data-type="part"] .content {
+  div[data-type="part"] .content,
+  section[data-type="titlepage"] .content {
     padding: 4em 0 7em; }
-  div[data-type="part"] header {
-    padding: 80px 0 1.5em; }
-  div[data-type="part"] h1 {
-    text-transform: uppercase;
-    font-size: 3em;
-    max-width: 700px;
-    margin: 0 auto;
-    top: 0px; }
-  div[data-type="part"] p {
-    text-align: justify;
-    max-width: 700px;
-    margin: 0 auto 1.5em; }
-  div[data-type="part"] + .navigation ul {
+  div[data-type="part"] h1,
+  section[data-type="titlepage"] h1 {
+    top: 0px;
+    text-transform: uppercase; }
+  div[data-type="part"] + .navigation ul,
+  section[data-type="titlepage"] + .navigation ul {
     height: 3.5em;
     position: fixed;
     bottom: 0;
     width: 100%; }
-  div[data-type="part"] img {
-    float: left;
-    margin-right: 0.5em; }
+  div[data-type="part"] h1, div[data-type="part"] h2, div[data-type="part"] p,
+  section[data-type="titlepage"] h1,
+  section[data-type="titlepage"] h2,
+  section[data-type="titlepage"] p {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center; }
+
+div[data-type="part"] header {
+  padding: 80px 0 1.5em; }
+div[data-type="part"] h1 {
+  font-size: 3em; }
+div[data-type="part"] p {
+  text-align: justify;
+  margin: 0 auto 1.5em; }
+div[data-type="part"] img {
+  float: left;
+  margin-right: 0.5em; }
 
 .blue blockquote, .blue [data-type="example"] {
   border-color: #41a2ba; }
@@ -1161,20 +1169,23 @@ div.navbar p a {
     section[data-type="acknowledgments"] .contributor:nth-child(2n+1) {
       clear: left; }
 
-  div[data-type="part"] + .navigation {
+  div[data-type="part"] + .navigation,
+  section[data-type="titleplage"] + .navigation {
     position: absolute;
     background: transparent;
     border: none; }
-    div[data-type="part"] + .navigation ul li {
+    div[data-type="part"] + .navigation ul li,
+    section[data-type="titleplage"] + .navigation ul li {
       bottom: 18px;
-      position: fixed; }
+      position: fixed; } }
+section[data-type="titlepage"] + .navigation ul {
+  background: #666666; }
+section[data-type="titlepage"] + .navigation .btn.open {
+  position: absolute; }
+section[data-type="titlepage"] + .navigation div[data-type="part"] .content, section[data-type="titlepage"] + .navigation div[data-type="part"] h1 {
+  padding-left: 30px;
+  padding-right: 30px; }
 
-  .btn.open {
-    position: absolute; }
-
-  div[data-type="part"] .content, div[data-type="part"] h1 {
-    padding-left: 30px;
-    padding-right: 30px; } }
 @media screen and (max-width: 568px) {
   section[data-type="acknowledgments"] .contributor {
     height: 300px;
