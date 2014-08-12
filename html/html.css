@@ -696,6 +696,8 @@ table {
   display: block;
   overflow: auto;
   border-bottom: none; }
+  table tr:nth-child(2n + 2) {
+    background: white; }
 
 table caption {
   font-family: "source_sans_proregular", sans-serif;
@@ -848,13 +850,14 @@ figcaption {
   display: block;
   padding: 20px;
   background: #efefef;
-  border-radius: 2px; }
+  border-radius: 2px;
+  margin: 1em 0 3em; }
 
 aside {
   background-color: #efefef;
   border: 1px solid #efefef;
-  padding: 20px 20px 10px 20px;
-  margin: 30px 0 30px 0; }
+  padding: 20px 30px;
+  margin: 30px 0; }
 
 aside h5 {
   font-family: "source_sans_proregular", sans-serif;
@@ -1119,7 +1122,7 @@ div.navbar p a {
     .navigation ul li:nth-child(1) a {
       padding-right: 30px;
       background: url("../../images/shared-icons/next.png") right no-repeat;
-      @retina-image('../../images/shared-icons/next', 18px 24px); }
+      @retina-image('../../images/shared-icons/next', 18px 24px, png, null, @2x); }
   .navigation ul li:nth-child(2) {
     left: 30px; }
     .navigation ul li:nth-child(2) a {

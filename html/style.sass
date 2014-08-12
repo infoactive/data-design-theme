@@ -1,8 +1,6 @@
 @import 'bourbon/bourbon'
 @import 'neat/neat'
 
-$retina-suffix: '@2x'
-
 * 
   -moz-box-sizing: border-box 
   -webkit-box-sizing: border-box 
@@ -613,6 +611,8 @@ table
   display: block
   overflow: auto
   border-bottom: none
+  tr:nth-child(2n + 2)
+    background: white 
 
 table caption
   font-family: 'source_sans_proregular', sans-serif
@@ -760,12 +760,13 @@ figcaption
   padding: 20px
   background: #efefef
   border-radius: 2px
+  margin: 1em 0 3em
 
 aside
   background-color: #efefef
   border: 1px solid #efefef
-  padding: 20px 20px 10px 20px
-  margin: 30px 0 30px 0
+  padding: 20px 30px 
+  margin: 30px 0
 
 aside h5
   font-family: 'source_sans_proregular', sans-serif
@@ -1024,7 +1025,7 @@ div.navbar p a
       a
         padding-right: 30px
         background: url('../../images/shared-icons/next.png') right no-repeat 
-        @retina-image('../../images/shared-icons/next', 18px 24px)
+        @retina-image('../../images/shared-icons/next', 18px 24px, png, null, @2x)
     li:nth-child(2)
       left: 30px
       a
