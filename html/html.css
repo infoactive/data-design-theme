@@ -450,7 +450,8 @@ section[data-type="titlepage"] {
   padding: 0;
   height: auto;
   min-height: 100%;
-  color: white; }
+  color: white;
+  position: fixed; }
   div[data-type="part"] .content,
   section[data-type="titlepage"] .content {
     padding: 4em 0 7em; }
