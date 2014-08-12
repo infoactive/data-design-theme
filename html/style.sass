@@ -448,7 +448,7 @@ section[data-type="titlepage"]
   height: auto
   min-height: 100%
   color: white
-  position: fixed
+  position: absolute
   .content
     padding: 4em 0 7em
   h1
@@ -459,9 +459,15 @@ section[data-type="titlepage"]
     position: fixed
     bottom: 0
     width: 100%
+    li a
+      opacity: .4
+      &:hover
+        opacity: .8
+    
   h1, h2, p
     max-width: 700px
     margin: 0 auto
+  h2, p
     text-align: center
 
 div[data-type="part"]
@@ -499,8 +505,6 @@ $color-names: blue yellow green violet red
       background: darken($color, 5)
     header
       background: $color
-    + .navigation ul
-      background: lighten(desaturate($color, 2), 8)
 
 section[data-type="preface"], 
 section[data-type="foreword"], 
@@ -1082,7 +1086,7 @@ div.navbar p a
     ul li
       bottom: 18px
       position: fixed
-
+      
 section[data-type="titlepage"] + .navigation
   ul
     background: lighten(black, 40)

@@ -451,7 +451,7 @@ section[data-type="titlepage"] {
   height: auto;
   min-height: 100%;
   color: white;
-  position: fixed; }
+  position: absolute; }
   div[data-type="part"] .content,
   section[data-type="titlepage"] .content {
     padding: 4em 0 7em; }
@@ -465,12 +465,21 @@ section[data-type="titlepage"] {
     position: fixed;
     bottom: 0;
     width: 100%; }
+    div[data-type="part"] + .navigation ul li a,
+    section[data-type="titlepage"] + .navigation ul li a {
+      opacity: 0.4; }
+      div[data-type="part"] + .navigation ul li a:hover,
+      section[data-type="titlepage"] + .navigation ul li a:hover {
+        opacity: 0.8; }
   div[data-type="part"] h1, div[data-type="part"] h2, div[data-type="part"] p,
   section[data-type="titlepage"] h1,
   section[data-type="titlepage"] h2,
   section[data-type="titlepage"] p {
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto; }
+  div[data-type="part"] h2, div[data-type="part"] p,
+  section[data-type="titlepage"] h2,
+  section[data-type="titlepage"] p {
     text-align: center; }
 
 div[data-type="part"] header {
@@ -501,8 +510,6 @@ div[data-type="part"].blue {
     background: #3a92a7; }
   div[data-type="part"].blue header {
     background: #41a2ba; }
-  div[data-type="part"].blue + .navigation ul {
-    background: #5fb0c4; }
 
 .yellow blockquote, .yellow [data-type="example"] {
   border-color: #eeb11e; }
@@ -521,8 +528,6 @@ div[data-type="part"].yellow {
     background: #e1a411; }
   div[data-type="part"].yellow header {
     background: #eeb11e; }
-  div[data-type="part"].yellow + .navigation ul {
-    background: #efbd46; }
 
 .green blockquote, .green [data-type="example"] {
   border-color: #6baf44; }
@@ -541,8 +546,6 @@ div[data-type="part"].green {
     background: #609d3d; }
   div[data-type="part"].green header {
     background: #6baf44; }
-  div[data-type="part"].green + .navigation ul {
-    background: #81bd5e; }
 
 .violet blockquote, .violet [data-type="example"] {
   border-color: #3e5084; }
@@ -561,8 +564,6 @@ div[data-type="part"].violet {
     background: #364573; }
   div[data-type="part"].violet header {
     background: #3e5084; }
-  div[data-type="part"].violet + .navigation ul {
-    background: #4d629d; }
 
 .red blockquote, .red [data-type="example"] {
   border-color: #cf4627; }
@@ -581,8 +582,6 @@ div[data-type="part"].red {
     background: #ba3f23; }
   div[data-type="part"].red header {
     background: #cf4627; }
-  div[data-type="part"].red + .navigation ul {
-    background: #d96145; }
 
 section[data-type="preface"],
 section[data-type="foreword"],
