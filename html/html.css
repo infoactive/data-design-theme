@@ -497,6 +497,8 @@ div[data-type="part"] img {
   border-color: #41a2ba; }
 .blue a, .blue blockquote:before {
   color: #41a2ba; }
+.blue a:hover {
+  color: #348194; }
 .blue .icon, .blue th {
   background: #41a2ba; }
 .blue table:not(.custom) tr:nth-child(2n + 1), .blue .highlight {
@@ -515,6 +517,8 @@ div[data-type="part"].blue {
   border-color: #eeb11e; }
 .yellow a, .yellow blockquote:before {
   color: #eeb11e; }
+.yellow a:hover {
+  color: #ca930f; }
 .yellow .icon, .yellow th {
   background: #eeb11e; }
 .yellow table:not(.custom) tr:nth-child(2n + 1), .yellow .highlight {
@@ -533,6 +537,8 @@ div[data-type="part"].yellow {
   border-color: #6baf44; }
 .green a, .green blockquote:before {
   color: #6baf44; }
+.green a:hover {
+  color: #558a36; }
 .green .icon, .green th {
   background: #6baf44; }
 .green table:not(.custom) tr:nth-child(2n + 1), .green .highlight {
@@ -551,6 +557,8 @@ div[data-type="part"].green {
   border-color: #3e5084; }
 .violet a, .violet blockquote:before {
   color: #3e5084; }
+.violet a:hover {
+  color: #2e3b61; }
 .violet .icon, .violet th {
   background: #3e5084; }
 .violet table:not(.custom) tr:nth-child(2n + 1), .violet .highlight {
@@ -569,6 +577,8 @@ div[data-type="part"].violet {
   border-color: #cf4627; }
 .red a, .red blockquote:before {
   color: #cf4627; }
+.red a:hover {
+  color: #a4371f; }
 .red .icon, .red th {
   background: #cf4627; }
 .red table:not(.custom) tr:nth-child(2n + 1), .red .highlight {
