@@ -689,13 +689,14 @@ dd p {
   text-indent: 0; }
 
 table {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 1em;
+  margin-bottom: 2em;
   border-collapse: collapse;
   font-size: 0.9em;
-  display: block;
+  display: inline-block;
   overflow: auto;
-  border-bottom: none; }
+  border-bottom: none;
+  max-height: 505px; }
   table tr:nth-child(2n + 2) {
     background: white; }
 
@@ -804,8 +805,8 @@ table.good-and-bad th:nth-child(2) {
   @retina-image('../../images/shared-icons/bad', 24px 24px); }
 
 table.yes-and-no th:nth-child(1) {
-  background: url("../../images/shared-icons/check.png") 1.2em no-repeat #6baf44;
-  @retina-image('../../images/shared-icons/check', 24px 24px); }
+  background: url("../../images/shared-icons/yes.png") 1.2em no-repeat #6baf44;
+  @retina-image('../../images/shared-icons/yes', 24px 24px); }
 table.yes-and-no th:nth-child(2) {
   background: url("../../images/shared-icons/no.png") 1.2em no-repeat #a9abaf;
   @retina-image('../../images/shared-icons/no', 24px 24px); }
