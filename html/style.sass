@@ -56,7 +56,7 @@ $yellow: #eeb11e
 $red: #cf4627
 $blue: #41a2ba
 $violet: #3e5084
-$green: #6baf44
+$green: #89c557
 $light-gray: #efefef
 $gray: #d1d2d4
 
@@ -109,6 +109,13 @@ section
 h2 
   margin-top: 2em
   margin-bottom: .5em
+  &.avoid
+    font-size: 1em
+    color: white
+    padding: .7em 0 .7em 3em
+    text-transform: uppercase
+    background: url('../../images/shared-icons/no.png') 1em 50% no-repeat $gray
+    @retina-image('../../images/shared-icons/no', 20px 20px)
 
 h3
   font-family: 'source_sans_probold', sans-serif
@@ -132,9 +139,10 @@ section[data-type="titlepage"]
     font-size: 5em
     text-align: center
   h2
-    font-size: 1.2em
-    line-height: 120%
     margin-top: 20px
+    font-size: 1.6em
+    padding: 0 2em
+    line-height: 140%
   p
     font-family: 'source_sans_proregular', sans-serif
     font-size: 13pt
@@ -670,8 +678,9 @@ table.yes-and-no,
 table.question-and-answer,
 table.good-and-bad,
   th
-    font-size: 1.3em
-    padding: .5em 1.5em .5em 3em
+    font-size: 1em
+    padding: .5em 1.5em .5em 3.2em
+    text-transform: uppercase
   tr
     background: transparent
   td, th
@@ -683,10 +692,10 @@ table.good-and-bad,
 
 table.question-and-answer
   th:nth-child(1)
-    background: url('../../images/shared-icons/search.png') 1.2em no-repeat #444
+    background: url('../../images/shared-icons/search.png') 1.2em .5em no-repeat #444
     @retina-image('../../images/shared-icons/search', 24px 24px)
   th:nth-child(2)
-    background: url('../../images/shared-icons/arrow.png') 1.2em no-repeat $blue
+    background: url('../../images/shared-icons/arrow.png') 1.2em .5em no-repeat $blue
     @retina-image('../../images/shared-icons/arrow', 24px 24px)
   td
     width: 50%
@@ -705,18 +714,18 @@ table.question-and-answer
 
 table.good-and-bad
   th:nth-child(1)
-    background: url('../../images/shared-icons/good.png') 1.2em no-repeat $green
+    background: url('../../images/shared-icons/good.png') 1.2em .5em no-repeat $green
     @retina-image('../../images/shared-icons/good', 24px 24px)
   th:nth-child(2)
-    background: url('../../images/shared-icons/bad.png') 1.2em no-repeat darken($gray, 15)
+    background: url('../../images/shared-icons/bad.png') 1.2em .5em no-repeat $gray
     @retina-image('../../images/shared-icons/bad', 24px 24px)
 
 table.yes-and-no
   th:nth-child(1)
-    background: url('../../images/shared-icons/yes.png') 1.2em no-repeat $green
+    background: url('../../images/shared-icons/yes.png') 1.2em .5em no-repeat $green
     @retina-image('../../images/shared-icons/yes', 24px 24px)
   th:nth-child(2)
-    background: url('../../images/shared-icons/no.png') 1.2em no-repeat darken($gray, 15)
+    background: url('../../images/shared-icons/no.png') 1.2em .5em no-repeat $gray
     @retina-image('../../images/shared-icons/no', 24px 24px)
   td
     width: 50%

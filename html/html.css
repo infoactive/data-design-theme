@@ -89,6 +89,13 @@ section {
 h2 {
   margin-top: 2em;
   margin-bottom: 0.5em; }
+  h2.avoid {
+    font-size: 1em;
+    color: white;
+    padding: 0.7em 0 0.7em 3em;
+    text-transform: uppercase;
+    background: url("../../images/shared-icons/no.png") 1em 50% no-repeat #d1d2d4;
+    @retina-image('../../images/shared-icons/no', 20px 20px); }
 
 h3 {
   font-family: "source_sans_probold", sans-serif;
@@ -111,9 +118,10 @@ section[data-type="titlepage"] h1 {
   font-size: 5em;
   text-align: center; }
 section[data-type="titlepage"] h2 {
-  font-size: 1.2em;
-  line-height: 120%;
-  margin-top: 20px; }
+  margin-top: 20px;
+  font-size: 1.6em;
+  padding: 0 2em;
+  line-height: 140%; }
 section[data-type="titlepage"] p {
   font-family: "source_sans_proregular", sans-serif;
   font-size: 13pt;
@@ -415,7 +423,7 @@ section[data-type="acknowledgments"] .role {
   section[data-type="acknowledgments"] .role p {
     padding: 7px 36px 5px 16px;
     color: white;
-    background: #6baf44;
+    background: #89c557;
     text-transform: capitalize; }
   section[data-type="acknowledgments"] .role .editor {
     background: #41a2ba; }
@@ -534,24 +542,24 @@ div[data-type="part"].yellow {
     background: #eeb11e; }
 
 .green blockquote, .green [data-type="example"] {
-  border-color: #6baf44; }
+  border-color: #89c557; }
 .green a, .green blockquote:before {
-  color: #6baf44; }
+  color: #89c557; }
 .green a:hover {
-  color: #558a36; }
+  color: #6fad3c; }
 .green .icon, .green th {
-  background: #6baf44; }
+  background: #89c557; }
 .green table:not(.custom) tr:nth-child(2n + 1), .green .highlight {
-  background: #f8fcf6; }
+  background: white; }
 .green tr.custom.extra-highlight {
-  background: #dcedd2; }
+  background: #e4f2d9; }
 
 div[data-type="part"].green {
-  background: #609d3d; }
+  background: #7cbe44; }
   div[data-type="part"].green .content {
-    background: #609d3d; }
+    background: #7cbe44; }
   div[data-type="part"].green header {
-    background: #6baf44; }
+    background: #89c557; }
 
 .violet blockquote, .violet [data-type="example"] {
   border-color: #3e5084; }
@@ -754,8 +762,9 @@ td pre.programlisting, td pre.screen, td pre.literallayout, td code {
 table.yes-and-no th,
 table.question-and-answer th,
 table.good-and-bad th {
-  font-size: 1.3em;
-  padding: 0.5em 1.5em 0.5em 3em; }
+  font-size: 1em;
+  padding: 0.5em 1.5em 0.5em 3.2em;
+  text-transform: uppercase; }
 table.yes-and-no tr,
 table.question-and-answer tr,
 table.good-and-bad tr {
@@ -778,10 +787,10 @@ table.good-and-bad td {
   padding: 1.3em 1.5em; }
 
 table.question-and-answer th:nth-child(1) {
-  background: url("../../images/shared-icons/search.png") 1.2em no-repeat #444444;
+  background: url("../../images/shared-icons/search.png") 1.2em 0.5em no-repeat #444444;
   @retina-image('../../images/shared-icons/search', 24px 24px); }
 table.question-and-answer th:nth-child(2) {
-  background: url("../../images/shared-icons/arrow.png") 1.2em no-repeat #41a2ba;
+  background: url("../../images/shared-icons/arrow.png") 1.2em 0.5em no-repeat #41a2ba;
   @retina-image('../../images/shared-icons/arrow', 24px 24px); }
 table.question-and-answer td {
   width: 50%;
@@ -798,17 +807,17 @@ table.question-and-answer td:nth-child(2) h2 {
     margin-top: 0; }
 
 table.good-and-bad th:nth-child(1) {
-  background: url("../../images/shared-icons/good.png") 1.2em no-repeat #6baf44;
+  background: url("../../images/shared-icons/good.png") 1.2em 0.5em no-repeat #89c557;
   @retina-image('../../images/shared-icons/good', 24px 24px); }
 table.good-and-bad th:nth-child(2) {
-  background: url("../../images/shared-icons/bad.png") 1.2em no-repeat #a9abaf;
+  background: url("../../images/shared-icons/bad.png") 1.2em 0.5em no-repeat #d1d2d4;
   @retina-image('../../images/shared-icons/bad', 24px 24px); }
 
 table.yes-and-no th:nth-child(1) {
-  background: url("../../images/shared-icons/yes.png") 1.2em no-repeat #6baf44;
+  background: url("../../images/shared-icons/yes.png") 1.2em 0.5em no-repeat #89c557;
   @retina-image('../../images/shared-icons/yes', 24px 24px); }
 table.yes-and-no th:nth-child(2) {
-  background: url("../../images/shared-icons/no.png") 1.2em no-repeat #a9abaf;
+  background: url("../../images/shared-icons/no.png") 1.2em 0.5em no-repeat #d1d2d4;
   @retina-image('../../images/shared-icons/no', 24px 24px); }
 table.yes-and-no td {
   width: 50%; }
