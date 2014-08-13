@@ -135,7 +135,7 @@ section[data-type="titlepage"]
   h1
     font-family: 'source_sans_prosemibold', sans-serif
     line-height: 120%
-    padding-top: 2em
+    padding-top: 1.5em
     font-size: 5em
     text-align: center
   h2
@@ -143,6 +143,10 @@ section[data-type="titlepage"]
     font-size: 1.6em
     padding: 0 2em
     line-height: 140%
+  .credits
+    position: absolute
+    bottom: 5em
+    width: 100%
   p
     font-family: 'source_sans_proregular', sans-serif
     font-size: 13pt
@@ -376,6 +380,10 @@ section[data-type="acknowledgments"]
     position: relative
     height: 400px
     background: #f4f4f4
+    .rock-star
+      background: url('../../images/contributors/star.png') 98% 50% no-repeat $green
+      @retina-image('../../images/contributors/star', 29px 29px)
+
 
   img.profile
     height: 88px
@@ -418,13 +426,14 @@ section[data-type="acknowledgments"]
     p
       padding: 7px 36px 5px 16px
       color: #FFF 
-      background: $green
+      background-color: $yellow
       text-transform: capitalize
     .editor
-      background: $blue
+      background-color: $blue
     .writer
-      background: $violet
-
+      background-color: $violet
+    .rock-star
+      background-color: $green
 .icon
   width: 240px
   height: 240px
@@ -1102,7 +1111,12 @@ div.navbar p a
       
 section[data-type="titlepage"] + .navigation
   ul
-    background: lighten(black, 40)
+    background: #222
+    li:nth-child(1) a
+      color: white
+      padding-right: 30px
+      background: url('../../images/shared-icons/next-white.png') right no-repeat 
+      @retina-image('../../images/shared-icons/next-white', 18px 24px, png, null, @2x)
 
   .btn.open
     position: absolute

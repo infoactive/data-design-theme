@@ -114,7 +114,7 @@ h4 {
 section[data-type="titlepage"] h1 {
   font-family: "source_sans_prosemibold", sans-serif;
   line-height: 120%;
-  padding-top: 2em;
+  padding-top: 1.5em;
   font-size: 5em;
   text-align: center; }
 section[data-type="titlepage"] h2 {
@@ -122,6 +122,10 @@ section[data-type="titlepage"] h2 {
   font-size: 1.6em;
   padding: 0 2em;
   line-height: 140%; }
+section[data-type="titlepage"] .credits {
+  position: absolute;
+  bottom: 5em;
+  width: 100%; }
 section[data-type="titlepage"] p {
   font-family: "source_sans_proregular", sans-serif;
   font-size: 13pt;
@@ -384,6 +388,9 @@ section[data-type="acknowledgments"] .contributor {
   background: #f4f4f4; }
   section[data-type="acknowledgments"] .contributor:last-child {
     margin-right: 0; }
+  section[data-type="acknowledgments"] .contributor .rock-star {
+    background: url("../../images/contributors/star.png") 98% 50% no-repeat #89c557;
+    @retina-image('../../images/contributors/star', 29px 29px); }
 section[data-type="acknowledgments"] img.profile {
   height: 88px;
   width: 88px;
@@ -423,12 +430,14 @@ section[data-type="acknowledgments"] .role {
   section[data-type="acknowledgments"] .role p {
     padding: 7px 36px 5px 16px;
     color: white;
-    background: #89c557;
+    background-color: #eeb11e;
     text-transform: capitalize; }
   section[data-type="acknowledgments"] .role .editor {
-    background: #41a2ba; }
+    background-color: #41a2ba; }
   section[data-type="acknowledgments"] .role .writer {
-    background: #3e5084; }
+    background-color: #3e5084; }
+  section[data-type="acknowledgments"] .role .rock-star {
+    background-color: #89c557; }
 
 .icon {
   width: 240px;
@@ -1202,7 +1211,12 @@ div.navbar p a {
       bottom: 18px;
       position: fixed; } }
 section[data-type="titlepage"] + .navigation ul {
-  background: #666666; }
+  background: #222222; }
+  section[data-type="titlepage"] + .navigation ul li:nth-child(1) a {
+    color: white;
+    padding-right: 30px;
+    background: url("../../images/shared-icons/next-white.png") right no-repeat;
+    @retina-image('../../images/shared-icons/next-white', 18px 24px, png, null, @2x); }
 section[data-type="titlepage"] + .navigation .btn.open {
   position: absolute; }
 section[data-type="titlepage"] + .navigation div[data-type="part"] .content, section[data-type="titlepage"] + .navigation div[data-type="part"] h1 {
