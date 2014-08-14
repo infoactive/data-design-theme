@@ -388,7 +388,7 @@ section[data-type="acknowledgments"]
   
   .description
     float: left
-    max-height: 250px
+    max-height: 270px
     overflow: hidden
     p 
       padding: 16px
@@ -624,6 +624,7 @@ table
   overflow: auto
   border-bottom: none
   max-height: 505px
+  max-width: 100%
   tr:nth-child(2n + 2)
     background: white 
 
@@ -1067,9 +1068,6 @@ div.navbar p a
   section[data-type="acknowledgments"]
     padding: 0 30px 50px
 
-  section[data-type="acknowledgments"] .contributor
-    height: 350px
-  
   .navigation
     position: absolute
     bottom: 0
@@ -1171,4 +1169,13 @@ section[data-type="titlepage"] + .navigation
 
   .btn.open
     position: absolute
+
+  section[data-type="appendix"], 
+  section[data-type="preface"], 
+  section[data-type="foreword"], 
+  section[data-type="introduction"], 
+  section[data-type="copyright-page"], 
+  section[data-type="acknowledgments"] 
+    > h1
+      font-size: 2.2em
 

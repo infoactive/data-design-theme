@@ -393,7 +393,7 @@ section[data-type="acknowledgments"] img.profile {
   margin-right: 0.7em; }
 section[data-type="acknowledgments"] .description {
   float: left;
-  max-height: 250px;
+  max-height: 270px;
   overflow: hidden; }
   section[data-type="acknowledgments"] .description p {
     padding: 16px;
@@ -708,7 +708,8 @@ table {
   display: inline-block;
   overflow: auto;
   border-bottom: none;
-  max-height: 505px; }
+  max-height: 505px;
+  max-width: 100%; }
   table tr:nth-child(2n + 2) {
     background: white; }
 
@@ -1161,9 +1162,6 @@ div.navbar p a {
   section[data-type="acknowledgments"] {
     padding: 0 30px 50px; }
 
-  section[data-type="acknowledgments"] .contributor {
-    height: 350px; }
-
   .navigation {
     position: absolute;
     bottom: 0;
@@ -1261,4 +1259,12 @@ section[data-type="titlepage"] + .navigation div[data-type="part"] .content, sec
     height: 400px; }
 
   .btn.open {
-    position: absolute; } }
+    position: absolute; }
+
+  section[data-type="appendix"] > h1,
+  section[data-type="preface"] > h1,
+  section[data-type="foreword"] > h1,
+  section[data-type="introduction"] > h1,
+  section[data-type="copyright-page"] > h1,
+  section[data-type="acknowledgments"] > h1 {
+    font-size: 2.2em; } }
