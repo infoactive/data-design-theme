@@ -144,17 +144,12 @@ section[data-type="titlepage"]
     padding: 0 2em
     line-height: 140%
   .credits
-    position: absolute
-    bottom: 5em
+    position: relative
+    margin-top: 13em
+    margin-bottom: 5em
     width: 100%
-  p
-    font-family: 'source_sans_proregular', sans-serif
-    font-size: 13pt
-    line-height: 16pt
-    margin-top: 0pt
-    margin-bottom: 0pt
-    float: none
-    text-indent: 0
+    padding: 0 1em
+    line-height: 150%
 
 section[data-type="halftitlepage"]
   display: none
@@ -1074,7 +1069,7 @@ div.navbar p a
 
   section[data-type="acknowledgments"] .contributor
     height: 350px
-
+  
   .navigation
     position: absolute
     bottom: 0
@@ -1094,6 +1089,11 @@ div.navbar p a
         &:nth-child(2)
           float: left
           left: 20px
+
+  section[data-type="titlepage"] + .navigation
+    position: relative
+    background: transparent
+    border: none
 
   section[data-type="acknowledgments"]
     .contributor
@@ -1168,4 +1168,7 @@ section[data-type="titlepage"] + .navigation
   section[data-type="acknowledgments"]
     .contributor
       height: 400px
+
+  .btn.open
+    position: absolute
 
