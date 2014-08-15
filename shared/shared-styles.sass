@@ -73,6 +73,21 @@ $color-names: blue yellow green violet red
     + .navigation ul
       background: lighten(desaturate($color, 2), 8)
 
+// general elements
+
+h2 
+  margin-top: 2em
+  margin-bottom: .5em
+  &.avoid
+    font-size: 1em
+    color: white
+    padding: .7em 0 .7em 3em
+    text-transform: uppercase
+    background: url('../../images/shared-icons/no.png') 1em 50% no-repeat $gray
+    @retina-image('../../images/shared-icons/no', 20px 20px)
+
+
+
 // tables
 
 table
@@ -188,7 +203,7 @@ blockquote p[data-type="attribution"]
   font-size: .85em
   margin-top: 1em
 
-// notes and warnings
+// notes, warnings, asides, and examples
 
 div[data-type="note"], 
 div[data-type="warning"],
@@ -223,3 +238,60 @@ div[data-type="warning"] p
   font-size: 1em
   text-indent: 0in
   margin-top: .5em
+
+div[data-type="example"]
+  padding: 1px 30px
+  background: lighten($light-gray, 2)
+  border-left: 10px solid #efefef
+  &.neutral
+    border-left: 10px solid darken($gray, 15)
+  p
+    margin: 1em 0
+
+div[data-type="example"] h5
+  font-family: 'source_sans_proregular', sans-serif
+  font-size: 0.8em
+  line-height: 120%
+  border-bottom: 1px solid #d8d8d8
+  padding-bottom: 6px
+  margin-top: 30px
+
+aside
+  background-color: #efefef
+  border: 1px solid #efefef
+  padding: 20px 30px 
+  margin: 30px 0
+
+aside h5
+  font-family: 'source_sans_proregular', sans-serif
+  font-size: 1em
+  line-height: 120%
+  text-align: center
+  margin: 0
+  padding: 0
+
+aside h6
+  font-family: 'source_sans_proregular', sans-serif
+  font-weight: bold
+  font-size: 0.9em
+  line-height: 120%
+
+aside p
+  font-family: 'source_sans_proregular', sans-serif
+  font-size: 1em
+  line-height: 130%
+  text-indent: 0
+  margin-top: 6px
+
+// captions
+
+figcaption
+  font-family: 'source_sans_proregular', sans-serif
+  font-size: .9em
+  font-style: italic
+  line-height: 120%
+  display: block
+  padding: 20px
+  background: #efefef
+  border-radius: 2px
+  margin: 1em 0 3em
