@@ -80,6 +80,8 @@ $color-names: blue yellow green violet red
     + .navigation ul
       background: lighten(desaturate($color, 2), 8)
 
+@import '../shared/shared-styles'
+
 .icon
   width: 240px
   height: 240px
@@ -170,6 +172,12 @@ p
     text-indent: 0
     /* first paragraph following a heading has no indent
 
+p a
+  display: inline
+  color: $blue
+  &:hover 
+    color: darken($blue, 5)
+
 section
   &[data-type="preface"] > h1 + p, &[data-type="foreword"] > h1 + p
     text-indent: 0
@@ -218,10 +226,32 @@ body
 
 /* general inlines
 
-a
-  color: cmyk(0%, 0%, 0%, 80%)
-  font-weight: bold
-  text-decoration: none
+blockquote
+  font-family: 'source_sans_proitalic', sans-serif
+  font-size: 1em
+  line-height: 130%
+  margin: 30px
+  padding: 20px
+  background: lighten($light-gray, 2)
+  border-left: 10px solid #efefef
+  
+blockquote:before
+  content: "\201C"
+  font-size: 4em
+  line-height: 0em
+  margin-right: 0.15em
+  margin-left: -0.2em
+  vertical-align: -0.4em
+  opacity: 0.2
+
+blockquote p
+  text-indent: 0
+  font-family: 'source_sans_proitalic', sans-serif
+
+blockquote p[data-type="attribution"]
+  text-align: right
+  font-size: .85em
+  margin-top: 1em
 
 /* PDF bookmarks
 
@@ -296,6 +326,32 @@ section
     padding-top: 96pt
 
 /* titlepage text font
+
+section[data-type="titlepage"]
+  background: url("../../images/cover.png") bottom repeat-x $blue
+  min-height: 800px
+  a 
+    color: white
+    text-decoration: underline
+  h1
+    font-family: 'source_sans_prosemibold', sans-serif
+    line-height: 120%
+    padding-top: 1.5em
+    font-size: 5em
+    text-align: center
+  h2
+    margin-top: 20px
+    margin-bottom: 2em
+    font-size: 1.6em
+    padding: 0 2em
+    line-height: 140%
+  .credits
+    position: relative
+    margin-top: 13em
+    margin-bottom: 5em
+    width: 100%
+    padding: 0 1em
+    line-height: 150%
 
 /* styling and positioning for author names
 

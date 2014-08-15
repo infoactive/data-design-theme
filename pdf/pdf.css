@@ -138,6 +138,96 @@ div[data-type="part"].red {
   div[data-type="part"].red + .navigation ul {
     background: #d96145; }
 
+table {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  display: inline-block;
+  overflow: auto;
+  border-bottom: none;
+  max-height: 505px;
+  max-width: 100%; }
+  table tr:nth-child(2n + 2) {
+    background: white; }
+
+table.yes-and-no th,
+table.question-and-answer th,
+table.good-and-bad th {
+  font-size: 1em;
+  padding: 0.5em 1.5em 0.5em 3.2em;
+  text-transform: uppercase; }
+table.yes-and-no tr,
+table.question-and-answer tr,
+table.good-and-bad tr {
+  background: transparent; }
+table.yes-and-no td, table.yes-and-no th,
+table.question-and-answer td,
+table.question-and-answer th,
+table.good-and-bad td,
+table.good-and-bad th {
+  white-space: normal; }
+  table.yes-and-no td p, table.yes-and-no th p,
+  table.question-and-answer td p,
+  table.question-and-answer th p,
+  table.good-and-bad td p,
+  table.good-and-bad th p {
+    font-size: 1em; }
+table.yes-and-no td,
+table.question-and-answer td,
+table.good-and-bad td {
+  padding: 1.3em 1.5em; }
+
+table.question-and-answer th:nth-child(1) {
+  background: url("../../images/shared-icons/search.png") 1.2em 0.5em no-repeat #444444;
+  @retina-image('../../images/shared-icons/search', 24px 24px); }
+table.question-and-answer th:nth-child(2) {
+  background: url("../../images/shared-icons/arrow.png") 1.2em 0.5em no-repeat #41a2ba;
+  @retina-image('../../images/shared-icons/arrow', 24px 24px); }
+table.question-and-answer td {
+  width: 50%;
+  padding: 1.5em;
+  padding-bottom: 1em; }
+table.question-and-answer td:nth-child(2) p {
+  color: #999999; }
+table.question-and-answer td:nth-child(2) h2 {
+  font-family: "source_sans_prosemibold", sans-serif;
+  color: #41a2ba;
+  font-size: 1em;
+  margin: 0; }
+  table.question-and-answer td:nth-child(2) h2 + p {
+    margin-top: 0; }
+
+table.good-and-bad th:nth-child(1) {
+  background: url("../../images/shared-icons/good.png") 1.2em 0.5em no-repeat #6baf44;
+  @retina-image('../../images/shared-icons/good', 24px 24px); }
+table.good-and-bad th:nth-child(2) {
+  background: url("../../images/shared-icons/bad.png") 1.2em 0.5em no-repeat #d1d2d4;
+  @retina-image('../../images/shared-icons/bad', 24px 24px); }
+
+table.yes-and-no th:nth-child(1) {
+  background: url("../../images/shared-icons/yes.png") 1.2em 0.5em no-repeat #6baf44;
+  @retina-image('../../images/shared-icons/yes', 24px 24px); }
+table.yes-and-no th:nth-child(2) {
+  background: url("../../images/shared-icons/no.png") 1.2em 0.5em no-repeat #d1d2d4;
+  @retina-image('../../images/shared-icons/no', 24px 24px); }
+table.yes-and-no td {
+  width: 50%; }
+table.yes-and-no td:nth-child(2) {
+  background: #efefef; }
+
+table.sections th:nth-child(1) {
+  background: url("../../images/shared-icons/sections.png") 1.2em no-repeat #444444;
+  @retina-image('../../images/shared-icons/sections', 24px 24px); }
+table.sections th:nth-child(2) {
+  background: url("../../images/shared-icons/add.png") 1.2em no-repeat #41a2ba;
+  @retina-image('../../images/shared-icons/add', 24px 24px); }
+table.sections h2 {
+  font-family: "source_sans_prosemibold", sans-serif;
+  color: #41a2ba;
+  font-size: 0.95em;
+  margin: 0; }
+
 .icon {
   width: 240px;
   height: 240px;
@@ -213,6 +303,12 @@ p[data-type="author"], p.author {
   text-indent: 0;
   /* first paragraph following a heading has no indent */ }
 
+p a {
+  display: inline;
+  color: #41a2ba; }
+  p a:hover {
+    color: #3a92a7; }
+
 section[data-type="preface"] > h1 + p, section[data-type="foreword"] > h1 + p {
   text-indent: 0;
   /* first paragraph following a heading has no indent */ }
@@ -256,10 +352,32 @@ body {
   font-family: "source_sans_proregular", sans-serif; }
 
 /* general inlines */
-a {
-  color: cmyk(0%, 0%, 0%, 80%);
-  font-weight: bold;
-  text-decoration: none; }
+blockquote {
+  font-family: "source_sans_proitalic", sans-serif;
+  font-size: 1em;
+  line-height: 130%;
+  margin: 30px;
+  padding: 20px;
+  background: #f4f4f4;
+  border-left: 10px solid #efefef; }
+
+blockquote:before {
+  content: "\201C";
+  font-size: 4em;
+  line-height: 0em;
+  margin-right: 0.15em;
+  margin-left: -0.2em;
+  vertical-align: -0.4em;
+  opacity: 0.2; }
+
+blockquote p {
+  text-indent: 0;
+  font-family: "source_sans_proitalic", sans-serif; }
+
+blockquote p[data-type="attribution"] {
+  text-align: right;
+  font-size: 0.85em;
+  margin-top: 1em; }
 
 /* PDF bookmarks */
 nav[data-type="toc"] > h1, div[data-type="part"] > h1 {
@@ -325,6 +443,32 @@ section[data-type="dedication"] {
   padding-top: 96pt; }
 
 /* titlepage text font */
+section[data-type="titlepage"] {
+  background: url("../../images/cover.png") bottom repeat-x #41a2ba;
+  min-height: 800px; }
+  section[data-type="titlepage"] a {
+    color: white;
+    text-decoration: underline; }
+  section[data-type="titlepage"] h1 {
+    font-family: "source_sans_prosemibold", sans-serif;
+    line-height: 120%;
+    padding-top: 1.5em;
+    font-size: 5em;
+    text-align: center; }
+  section[data-type="titlepage"] h2 {
+    margin-top: 20px;
+    margin-bottom: 2em;
+    font-size: 1.6em;
+    padding: 0 2em;
+    line-height: 140%; }
+  section[data-type="titlepage"] .credits {
+    position: relative;
+    margin-top: 13em;
+    margin-bottom: 5em;
+    width: 100%;
+    padding: 0 1em;
+    line-height: 150%; }
+
 /* styling and positioning for author names */
 /* copyright page */
 /* dedication */
@@ -481,7 +625,7 @@ section[data-type="preface"] > h1, section[data-type="foreword"] > h1, section[d
   color: #aaaaaa; }
 section[data-type="preface"] > h1, section[data-type="foreword"] > h1 {
   string-set: ChapterTitle self; }
-section[data-type="chapter"] > h1, section[data-type="chapter"] > header > h1 {
+section[data-type="chapter"] > h1, section section[data-type="chapter"] > header > h1 {
   string-set: ChapterTitle self, SectionTitle self;
   counter-increment: ChapterNumber; }
 section[data-type="appendix"] > h1 {
@@ -951,4 +1095,3 @@ div.hard-pagebreak {
 
 /* ------------------- PAGEBREAK HANDLING ------------------- */
 /* force a page break */
-

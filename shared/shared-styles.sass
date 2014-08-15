@@ -1,0 +1,84 @@
+table
+  margin-top: 1em
+  margin-bottom: 2em
+  border-collapse: collapse
+  font-size: .9em
+  display: inline-block
+  overflow: auto
+  border-bottom: none
+  max-height: 505px
+  max-width: 100%
+  tr:nth-child(2n + 2)
+    background: white 
+
+table.yes-and-no,
+table.question-and-answer,
+table.good-and-bad,
+  th
+    font-size: 1em
+    padding: .5em 1.5em .5em 3.2em
+    text-transform: uppercase
+  tr
+    background: transparent
+  td, th
+    white-space: normal
+    p
+      font-size: 1em
+  td
+    padding: 1.3em 1.5em
+
+table.question-and-answer
+  th:nth-child(1)
+    background: url('../../images/shared-icons/search.png') 1.2em .5em no-repeat #444
+    @retina-image('../../images/shared-icons/search', 24px 24px)
+  th:nth-child(2)
+    background: url('../../images/shared-icons/arrow.png') 1.2em .5em no-repeat $blue
+    @retina-image('../../images/shared-icons/arrow', 24px 24px)
+  td
+    width: 50%
+    padding: 1.5em
+    padding-bottom: 1em
+  td:nth-child(2)
+    p
+      color: #999
+    h2
+      font-family: 'source_sans_prosemibold', sans-serif
+      color: $blue
+      font-size: 1em
+      margin: 0
+      + p
+        margin-top: 0
+
+table.good-and-bad
+  th:nth-child(1)
+    background: url('../../images/shared-icons/good.png') 1.2em .5em no-repeat $green
+    @retina-image('../../images/shared-icons/good', 24px 24px)
+  th:nth-child(2)
+    background: url('../../images/shared-icons/bad.png') 1.2em .5em no-repeat $gray
+    @retina-image('../../images/shared-icons/bad', 24px 24px)
+
+table.yes-and-no
+  th:nth-child(1)
+    background: url('../../images/shared-icons/yes.png') 1.2em .5em no-repeat $green
+    @retina-image('../../images/shared-icons/yes', 24px 24px)
+  th:nth-child(2)
+    background: url('../../images/shared-icons/no.png') 1.2em .5em no-repeat $gray
+    @retina-image('../../images/shared-icons/no', 24px 24px)
+  td
+    width: 50%
+  td:nth-child(2)
+    background: $light-gray
+
+table.sections
+  th:nth-child(1)
+    background: url('../../images/shared-icons/sections.png') 1.2em no-repeat #444
+    @retina-image('../../images/shared-icons/sections', 24px 24px)
+  th:nth-child(2)
+    background: url('../../images/shared-icons/add.png') 1.2em no-repeat $blue
+    @retina-image('../../images/shared-icons/add', 24px 24px)
+  h2
+    font-family: 'source_sans_prosemibold', sans-serif
+    color: $blue
+    font-size: .95em
+    margin: 0
+
