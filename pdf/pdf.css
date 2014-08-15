@@ -498,10 +498,10 @@ section[data-type="titlepage"] {
     color: white;
     text-decoration: underline; }
   section[data-type="titlepage"] h1 {
-    font-family: "source_sans_prosemibold", sans-serif;
+    font-family: "source_sans_probold", sans-serif;
     line-height: 120%;
     padding-top: 1.5em;
-    font-size: 5em;
+    font-size: 4em;
     text-align: center;
     text-transform: uppercase;
     color: white; }
@@ -779,7 +779,6 @@ section[data-type="titlepage"] {
   page: blank;
   page-break-before: always;
   margin: -0.75in;
-  margin-bottom: 0;
   width: 9in;
   padding: 0.75in;
   padding-bottom: 6in;
@@ -1099,8 +1098,8 @@ section[data-type="acknowledgments"] .header {
     section[data-type="acknowledgments"] .header h3 a {
       color: #aaaaaa; }
 section[data-type="acknowledgments"] .contributor {
-  width: 20%;
-  margin: 0 10px;
+  width: 42%;
+  margin: 0 2%;
   display: inline-block;
   margin-bottom: 28px;
   position: relative;
