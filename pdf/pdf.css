@@ -777,7 +777,8 @@ section[data-type="foreword"] {
   @top-left {
     content: none; } }
 /* parts */
-div[data-type="part"] {
+div[data-type="part"],
+div[data-type="titlepage"] {
   page: blank;
   page-break-before: always;
   margin: -0.75in;
@@ -789,7 +790,8 @@ div[data-type="part"] {
   min-height: 100%;
   height: auto;
   color: white; }
-  div[data-type="part"] header h1 {
+  div[data-type="part"] header h1,
+  div[data-type="titlepage"] header h1 {
     font-family: "source_sans_probold", sans-serif;
     font-size: 30pt;
     line-height: 22pt;
@@ -801,10 +803,12 @@ div[data-type="part"] {
     counter-increment: PartNumber;
     text-transform: uppercase;
     color: white; }
-    div[data-type="part"] header h1 img {
+    div[data-type="part"] header h1 img,
+    div[data-type="titlepage"] header h1 img {
       display: block;
       margin-bottom: 0.5in; }
-  div[data-type="part"] p {
+  div[data-type="part"] p,
+  div[data-type="titlepage"] p {
     color: white;
     font-size: 12pt; }
 
@@ -948,7 +952,7 @@ figure {
   figure figcaption {
     display: block;
     clear: both;
-    width: 1in;
+    width: 6in;
     text-align: left;
     font-style: italic;
     font-size: 7.5pt;
