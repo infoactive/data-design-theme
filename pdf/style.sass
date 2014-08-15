@@ -2,6 +2,11 @@
 
 @import '../shared/shared-styles'
 
+@for $i from 1 through 5
+  $color: nth($colors, $i)
+  section[data-type="sect1"]
+    border-top: 18px solid $color
+
 .icon
   width: 240px
   height: 240px
