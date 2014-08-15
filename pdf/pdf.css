@@ -419,10 +419,6 @@ li > p, dd p {
   text-indent: 0;
   /* first paragraph following a heading has no indent */ }
 
-section[data-type="titlepage"] p, section[data-type="copyright-page"] p {
-  text-indent: 0;
-  /* first paragraph following a heading has no indent */ }
-
 p[data-type="author"], p.author {
   text-indent: 0;
   /* first paragraph following a heading has no indent */ }
@@ -497,8 +493,7 @@ body[data-type="book"] {
 
 /* frontmatter */
 section[data-type="titlepage"] {
-  background: url("../../images/cover.png") bottom repeat-x #41a2ba;
-  min-height: 800px; }
+  background: url("../../images/cover.png") bottom repeat-x #41a2ba; }
   section[data-type="titlepage"] a {
     color: white;
     text-decoration: underline; }
@@ -507,7 +502,9 @@ section[data-type="titlepage"] {
     line-height: 120%;
     padding-top: 1.5em;
     font-size: 5em;
-    text-align: center; }
+    text-align: center;
+    text-transform: uppercase;
+    color: white; }
   section[data-type="titlepage"] h2 {
     margin-top: 20px;
     margin-bottom: 2em;
@@ -1120,8 +1117,7 @@ section[data-type="acknowledgments"] .contributor {
   height: 400px;
   background: #f4f4f4; }
   section[data-type="acknowledgments"] .contributor .rock-star {
-    background: url("../../images/contributors/star.png") 98% 50% no-repeat #89c557;
-    @retina-image('../../images/contributors/star', 29px 29px); }
+    background: url("../shared/images/contributors/star.png") 98% 50% no-repeat #89c557; }
 section[data-type="acknowledgments"] img.profile {
   height: 88px;
   width: 88px;
@@ -1148,13 +1144,11 @@ section[data-type="acknowledgments"] .description {
       float: right;
       text-indent: -9999px;
       opacity: 0.4;
-      background: url("../../images/contributors/website.png");
-      @retina-image('../../images/contributors/website', 29px 29px); }
+      background: url("../shared/images/contributors/website.png"); }
       section[data-type="acknowledgments"] .description .links a:hover {
         opacity: 1; }
     section[data-type="acknowledgments"] .description .links .twitter {
-      background: url("../../images/contributors/twitter.png");
-      @retina-image('../../images/contributors/twitter', 29px 29px); }
+      background: url("../shared/images/contributors/twitter.png"); }
 section[data-type="acknowledgments"] .role {
   float: left;
   width: 100%; }
