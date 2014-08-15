@@ -1,11 +1,12 @@
 @charset "UTF-8"
 
+@import '../html/bourbon/bourbon'
+@import '../html/neat/neat'
+
 @import '../shared/shared-styles'
 
-@for $i from 1 through 5
-  $color: nth($colors, $i)
-  section[data-type="sect1"]
-    border-top: 18px solid $color
+section[data-type="sect1"]
+  border-top: 18px solid $gray
 
 .icon
   width: 240px
@@ -382,7 +383,7 @@ section
     color: #aaa
   &[data-type="preface"] > h1, &[data-type="foreword"] > h1
     string-set: ChapterTitle self
-  &[data-type="chapter"] > h1, section[data-type="chapter"] > header > h1
+  &[data-type="chapter"] > h1, &[data-type="chapter"] > header > h1
     string-set: ChapterTitle self, SectionTitle self
     counter-increment: ChapterNumber
   &[data-type="appendix"] > h1
@@ -512,11 +513,13 @@ div[data-type="part"]
   page: blank
   page-break-before: always
   margin: -.75in
+  margin-bottom: 0
   width: 9in
   padding: .75in
   padding-bottom: 6in
   max-width: 100%
   min-height: 100%
+  overflow: none
   height: auto
   color: white
   header h1
@@ -579,7 +582,6 @@ section
   @bottom-left
     content: normal
 
-
 @page appendix:left
   @bottom-left
     content: counter(page)
@@ -598,12 +600,10 @@ section
 
 ul, ol
   /* bulleted and numbered lists
-  margin: 7pt 0 7pt .33in
+  margin: 7pt
 
 ul li, ol li
   font-family: "source_sans_proregular", sans-serif
-  font-size: 9.5pt
-  margin-top: 3pt
 
 dl
   /* definition lists
@@ -627,9 +627,6 @@ table
   margin: 12pt 0
   border-collapse: collapse
 
-thead + tbody
-  border-bottom: 0.5pt solid cmyk(0%, 0%, 0%, 100%)
-
 table caption
   margin-bottom: 5pt
   page-break-after: avoid
@@ -647,9 +644,6 @@ table caption
     margin-bottom: 7.2pt
     margin-top: 0
 
-tr
-  border-width: 0
-
 th
   /* table heading rows
   font-family: "source_sans_proregular", sans-serif
@@ -657,8 +651,6 @@ th
   font-size: 9pt
   text-align: left
   margin-top: 0
-  border-top: 0.5pt solid cmyk(0%, 0%, 0%, 100%)
-  border-bottom: 0.5pt solid cmyk(0%, 0%, 0%, 100%)
   padding: 4.5pt 0.0625in 4.5pt 0.0625in
   color: #fff
 
@@ -689,17 +681,6 @@ table p
   text-indent: 0
   margin: 0
 
-td
-  pre
-    &.programlisting, &.screen, &.literallayout
-      /* allow code in tables to wrap
-      white-space: pre-wrap
-      word-wrap: break-word
-  code
-    /* allow code in tables to wrap
-    white-space: pre-wrap
-    word-wrap: break-word
-
 /* figures
 
 figure
@@ -712,10 +693,7 @@ figure
   overflow: auto
   figcaption
     display: block
-    -ah-float: outside page
     clear: both
-    margin-left: -1.25in
-    margin-right: -1.25in
     width: 1in
     text-align: left
     font-style: italic
@@ -758,40 +736,11 @@ dt img
 figure div.border-box
   display: inline
 
-/* sidebars
-
-aside
-  &[data-type="sidebar"]
-    /* sidebar containers
-    background-color: cmyk(0%, 0%, 0%, 15%)
-    margin: 0.25in -1.625in
-    padding: 0.25in 1.625in
-    width: 4.375in
-    clear: both
-  h5
-    /* sidebar titles
-    font-family: "source_sans_probold", sans-serif
-    font-size: 11pt
-    line-height: 13pt
-    text-align: center
-    text-transform: uppercase
-    margin-bottom: 0.2in
-    margin-top: 0
-  h6
-    /* sidebar subtitles
-  p, dd
-    /* sidebar text
-    font-size: 7.5pt
-    line-height: 11.5pt
-    text-indent: 0
-    margin-bottom: 6pt
-  dt
-    font-size: 7.5pt
-    font-weight: bold
-
 /* admonitions
 
 div
+  &[data-type="warning"]
+    border-top: 12pt solid #cf4627
   &[data-type="note"], &[data-type="warning"]
     page-break-inside: avoid
   &[data-type="note"] p, &[data-type="warning"] p
