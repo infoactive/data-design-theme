@@ -1,85 +1,5 @@
 @charset "UTF-8"
 
-@font-face
-  font-family: "source_sans_proregular"
-  src: url("../fonts/sourcesanspro-regular-webfont.eot")
-  src: url("../fonts/sourcesanspro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-regular-webfont.woff") format("woff"), url("../fonts/sourcesanspro-regular-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular") format("svg")
-  font-weight: normal
-  font-style: normal
-
-@font-face
-  font-family: "source_sans_prosemibold"
-  src: url("../fonts/sourcesanspro-semibold-webfont.eot")
-  src: url("../fonts/sourcesanspro-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-semibold-webfont.woff") format("woff"), url("../fonts/sourcesanspro-semibold-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold") format("svg")
-  font-weight: normal
-  font-style: normal
-
-@font-face
-  font-family: "source_sans_probold"
-  src: url("../fonts/sourcesanspro-bold-webfont.eot")
-  src: url("../fonts/sourcesanspro-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-bold-webfont.woff") format("woff"), url("../fonts/sourcesanspro-bold-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-bold-webfont.svg#source_sans_probold") format("svg")
-  font-weight: normal
-  font-style: normal
-
-@font-face
-  font-family: "source_sans_prolight"
-  src: url("../fonts/sourcesanspro-light-webfont.eot")
-  src: url("../fonts/sourcesanspro-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-light-webfont.woff") format("woff"), url("../fonts/sourcesanspro-light-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-light-webfont.svg#source_sans_prolight") format("svg")
-  font-weight: normal
-  font-style: normal
-
-@font-face
-  font-family: "source_sans_proitalic"
-  src: url("../fonts/sourcesanspro-italic-webfont.eot")
-  src: url("../fonts/sourcesanspro-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-italic-webfont.woff") format("woff"), url("../fonts/sourcesanspro-italic-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-italic-webfont.svg#source_sans_proitalic") format("svg")
-  font-weight: normal
-  font-style: normal
-
-$yellow: #eeb11e
-$red: #cf4627
-$blue: #41a2ba
-$violet: #3e5084
-$green: #6baf44
-$light-gray: #efefef
-$gray: #d1d2d4
-
-$light-yellow: lighten($yellow, 44)
-$light-red: lighten($red, 50)
-$light-blue: lighten($blue, 48)
-$light-violet: lighten($violet, 60)
-$light-green: lighten($green, 50)
-
-$colors: $blue $yellow $green $violet $red
-$light-colors: $light-blue $light-yellow $light-green $light-violet $light-red
-
-$color-names: blue yellow green violet red
-
-@for $i from 1 through 5
-  $color: nth($colors, $i)
-  $light-color: nth($light-colors, $i)
-  $color-name: nth($color-names, $i)
-  .#{nth($color-names, $i)}
-    blockquote, [data-type="example"]
-      border-color: $color
-    a, blockquote:before
-      color: $color
-    .icon, th
-      background: $color
-    table:not(.custom) tr:nth-child(2n + 1), .highlight
-      background: $light-color
-    tr.custom.extra-highlight
-      background: darken($light-color, 10)
-    section[data-type="sect1"]
-      border-top: 18px solid $color
-  div[data-type="part"].#{nth($color-names, $i)}
-    background: darken($color, 5)
-    .content
-      background: darken($color, 5)
-    header
-      background: $color
-    + .navigation ul
-      background: lighten(desaturate($color, 2), 8)
-
 @import '../shared/shared-styles'
 
 .icon
@@ -105,7 +25,6 @@ $color-names: blue yellow green violet red
     width: 1.1in
     clear: both
 
-
 head title
   display: none
 
@@ -120,7 +39,6 @@ figure[data-type="cover"]
 @page cover
   margin: 0
   padding: 0
-
 
 @page
   margin-left: .75in
@@ -226,32 +144,6 @@ body
 
 /* general inlines
 
-blockquote
-  font-family: 'source_sans_proitalic', sans-serif
-  font-size: 1em
-  line-height: 130%
-  margin: 30px
-  padding: 20px
-  background: lighten($light-gray, 2)
-  border-left: 10px solid #efefef
-  
-blockquote:before
-  content: "\201C"
-  font-size: 4em
-  line-height: 0em
-  margin-right: 0.15em
-  margin-left: -0.2em
-  vertical-align: -0.4em
-  opacity: 0.2
-
-blockquote p
-  text-indent: 0
-  font-family: 'source_sans_proitalic', sans-serif
-
-blockquote p[data-type="attribution"]
-  text-align: right
-  font-size: .85em
-  margin-top: 1em
 
 /* PDF bookmarks
 

@@ -1,5 +1,6 @@
 @import 'bourbon/bourbon'
 @import 'neat/neat'
+@import '../shared/shared-styles'
 
 * 
   -moz-box-sizing: border-box 
@@ -30,44 +31,6 @@ html
   src: url('../fonts/sourcesanspro-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/sourcesanspro-semibold-webfont.woff') format('woff'), url('../fonts/sourcesanspro-semibold-webfont.ttf') format('truetype'), url('../fonts/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold') format('svg')
   font-weight: normal
   font-style: normal
-
-@font-face
-  font-family: 'source_sans_probold'
-  src: url('../fonts/sourcesanspro-bold-webfont.eot')
-  src: url('../fonts/sourcesanspro-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/sourcesanspro-bold-webfont.woff') format('woff'), url('../fonts/sourcesanspro-bold-webfont.ttf') format('truetype'), url('../fonts/sourcesanspro-bold-webfont.svg#source_sans_probold') format('svg')
-  font-weight: normal
-  font-style: normal
-
-@font-face
-  font-family: 'source_sans_prolight'
-  src: url('../fonts/sourcesanspro-light-webfont.eot')
-  src: url('../fonts/sourcesanspro-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/sourcesanspro-light-webfont.woff') format('woff'), url('../fonts/sourcesanspro-light-webfont.ttf') format('truetype'), url('../fonts/sourcesanspro-light-webfont.svg#source_sans_prolight') format('svg')
-  font-weight: normal
-  font-style: normal
-
-@font-face
-  font-family: 'source_sans_proitalic'
-  src: url('../fonts/sourcesanspro-italic-webfont.eot')
-  src: url('../fonts/sourcesanspro-italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/sourcesanspro-italic-webfont.woff') format('woff'), url('../fonts/sourcesanspro-italic-webfont.ttf') format('truetype'), url('../fonts/sourcesanspro-italic-webfont.svg#source_sans_proitalic') format('svg')
-  font-weight: normal
-  font-style: normal
-
-$yellow: #eeb11e
-$red: #cf4627
-$blue: #41a2ba
-$violet: #3e5084
-$green: #89c557
-$light-gray: #efefef
-$gray: #d1d2d4
-
-$light-yellow: lighten($yellow, 44)
-$light-red: lighten($red, 50)
-$light-blue: lighten($blue, 48)
-$light-violet: lighten($violet, 60)
-$light-green: lighten($green, 50)
-
-$colors: $blue $yellow $green $violet $red
-$light-colors: $light-blue $light-yellow $light-green $light-violet $light-red
 
 p, dd
   font-family: 'source_sans_proregular', sans-serif
@@ -492,32 +455,6 @@ div[data-type="part"]
     float: left
     margin-right: .5em
 
-$color-names: blue yellow green violet red
-
-@for $i from 1 through 5
-  $color: nth($colors, $i)
-  $light-color: nth($light-colors, $i)
-  $color-name: nth($color-names, $i)
-  .#{nth($color-names, $i)}
-    blockquote, [data-type="example"]
-      border-color: $color
-    a, blockquote:before
-      color: $color
-    a:hover
-      color: darken($color, 10)
-    .icon, th
-      background: $color
-    table:not(.custom) tr:nth-child(2n + 1), .highlight
-      background: $light-color
-    tr.custom.extra-highlight
-      background: darken($light-color, 10)
-  div[data-type="part"].#{nth($color-names, $i)}
-    background: darken($color, 5)
-    .content
-      background: darken($color, 5)
-    header
-      background: $color
-
 section[data-type="preface"], 
 section[data-type="foreword"], 
 section[data-type="chapter"], 
@@ -679,77 +616,6 @@ td pre.programlisting, td pre.screen, td pre.literallayout, td code
   white-space: pre-wrap
   word-wrap: break-word
 
-table.yes-and-no,
-table.question-and-answer,
-table.good-and-bad,
-  th
-    font-size: 1em
-    padding: .5em 1.5em .5em 3.2em
-    text-transform: uppercase
-  tr
-    background: transparent
-  td, th
-    white-space: normal
-    p
-      font-size: 1em
-  td
-    padding: 1.3em 1.5em
-
-table.question-and-answer
-  th:nth-child(1)
-    background: url('../../images/shared-icons/search.png') 1.2em .5em no-repeat #444
-    @retina-image('../../images/shared-icons/search', 24px 24px)
-  th:nth-child(2)
-    background: url('../../images/shared-icons/arrow.png') 1.2em .5em no-repeat $blue
-    @retina-image('../../images/shared-icons/arrow', 24px 24px)
-  td
-    width: 50%
-    padding: 1.5em
-    padding-bottom: 1em
-  td:nth-child(2)
-    p
-      color: #999
-    h2
-      font-family: 'source_sans_prosemibold', sans-serif
-      color: $blue
-      font-size: 1em
-      margin: 0
-      + p
-        margin-top: 0
-
-table.good-and-bad
-  th:nth-child(1)
-    background: url('../../images/shared-icons/good.png') 1.2em .5em no-repeat $green
-    @retina-image('../../images/shared-icons/good', 24px 24px)
-  th:nth-child(2)
-    background: url('../../images/shared-icons/bad.png') 1.2em .5em no-repeat $gray
-    @retina-image('../../images/shared-icons/bad', 24px 24px)
-
-table.yes-and-no
-  th:nth-child(1)
-    background: url('../../images/shared-icons/yes.png') 1.2em .5em no-repeat $green
-    @retina-image('../../images/shared-icons/yes', 24px 24px)
-  th:nth-child(2)
-    background: url('../../images/shared-icons/no.png') 1.2em .5em no-repeat $gray
-    @retina-image('../../images/shared-icons/no', 24px 24px)
-  td
-    width: 50%
-  td:nth-child(2)
-    background: $light-gray
-
-table.sections
-  th:nth-child(1)
-    background: url('../../images/shared-icons/sections.png') 1.2em no-repeat #444
-    @retina-image('../../images/shared-icons/sections', 24px 24px)
-  th:nth-child(2)
-    background: url('../../images/shared-icons/add.png') 1.2em no-repeat $blue
-    @retina-image('../../images/shared-icons/add', 24px 24px)
-  h2
-    font-family: 'source_sans_prosemibold', sans-serif
-    color: $blue
-    font-size: .95em
-    margin: 0
-
 figure 
   margin: 0
   display: block
@@ -839,40 +705,6 @@ a[data-type="noteref"]
   &:focus
     outline: none
 
-div[data-type="note"], 
-div[data-type="warning"],
-div[data-type="sidebar"]
-  margin: 50px 0 40px
-  page-break-inside: avoid
-  background: #efefef
-  border-radius: 2px
-  padding: 15px 40px 20px 40px
-
-div[data-type="warning"]
-  background: url("../../images/shared-icons/warning.png") 1.6em 1.8em no-repeat $light-gray
-  @retina-image('../../images/shared-icons/warning', 50px 50px)
-  border-top: 12px solid $red      
-  padding-left: 110px
-
-div[data-type="note"], 
-div[data-type="warning"]
-  h1
-    color: #000
-    font-family: 'source_sans_prosemibold', sans-serif
-    font-size: 1.4em
-    text-align: center
-    margin: 4px 0
-    padding: 0
-  h3
-    margin-top: .5em
-
-div[data-type="note"] p, 
-div[data-type="warning"] p
-  font-family: 'source_sans_proregular', sans-serif
-  font-size: 1em
-  text-indent: 0in
-  margin-top: .5em
-
 pre, code
   font-family: monospace
 
@@ -888,13 +720,6 @@ code
 
 table pre
   text-indent: 0
-
-div[data-type="note"] code, 
-div[data-type="warning"] code, 
-aside code, 
-table code
-  font-size: inherit
-  line-height: inherit
 
 div[data-type="example"]
   padding: 1px 30px
@@ -912,33 +737,6 @@ div[data-type="example"] h5
   border-bottom: 1px solid #d8d8d8
   padding-bottom: 6px
   margin-top: 30px
-
-blockquote
-  font-family: 'source_sans_proitalic', sans-serif
-  font-size: 1em
-  line-height: 130%
-  margin: 30px
-  padding: 20px
-  background: lighten($light-gray, 2)
-  border-left: 10px solid #efefef
-  
-blockquote:before
-  content: "\201C"
-  font-size: 4em
-  line-height: 0em
-  margin-right: 0.15em
-  margin-left: -0.2em
-  vertical-align: -0.4em
-  opacity: 0.2
-
-blockquote p
-  text-indent: 0
-  font-family: 'source_sans_proitalic', sans-serif
-
-blockquote p[data-type="attribution"]
-  text-align: right
-  font-size: .85em
-  margin-top: 1em
 
 div.navbar
   font-family: 'source_sans_proregular', sans-serif
