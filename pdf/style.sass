@@ -2,36 +2,36 @@
 
 @font-face
   font-family: "source_sans_proregular"
-  src: url("fonts/sourcesanspro-regular-webfont.eot")
-  src: url("fonts/sourcesanspro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/sourcesanspro-regular-webfont.woff") format("woff"), url("fonts/sourcesanspro-regular-webfont.ttf") format("truetype"), url("fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular") format("svg")
+  src: url("../fonts/sourcesanspro-regular-webfont.eot")
+  src: url("../fonts/sourcesanspro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-regular-webfont.woff") format("woff"), url("../fonts/sourcesanspro-regular-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular") format("svg")
   font-weight: normal
   font-style: normal
 
 @font-face
   font-family: "source_sans_prosemibold"
-  src: url("fonts/sourcesanspro-semibold-webfont.eot")
-  src: url("fonts/sourcesanspro-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/sourcesanspro-semibold-webfont.woff") format("woff"), url("fonts/sourcesanspro-semibold-webfont.ttf") format("truetype"), url("fonts/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold") format("svg")
+  src: url("../fonts/sourcesanspro-semibold-webfont.eot")
+  src: url("../fonts/sourcesanspro-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-semibold-webfont.woff") format("woff"), url("../fonts/sourcesanspro-semibold-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold") format("svg")
   font-weight: normal
   font-style: normal
 
 @font-face
   font-family: "source_sans_probold"
-  src: url("fonts/sourcesanspro-bold-webfont.eot")
-  src: url("fonts/sourcesanspro-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/sourcesanspro-bold-webfont.woff") format("woff"), url("fonts/sourcesanspro-bold-webfont.ttf") format("truetype"), url("fonts/sourcesanspro-bold-webfont.svg#source_sans_probold") format("svg")
+  src: url("../fonts/sourcesanspro-bold-webfont.eot")
+  src: url("../fonts/sourcesanspro-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-bold-webfont.woff") format("woff"), url("../fonts/sourcesanspro-bold-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-bold-webfont.svg#source_sans_probold") format("svg")
   font-weight: normal
   font-style: normal
 
 @font-face
   font-family: "source_sans_prolight"
-  src: url("fonts/sourcesanspro-light-webfont.eot")
-  src: url("fonts/sourcesanspro-light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/sourcesanspro-light-webfont.woff") format("woff"), url("fonts/sourcesanspro-light-webfont.ttf") format("truetype"), url("fonts/sourcesanspro-light-webfont.svg#source_sans_prolight") format("svg")
+  src: url("../fonts/sourcesanspro-light-webfont.eot")
+  src: url("../fonts/sourcesanspro-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-light-webfont.woff") format("woff"), url("../fonts/sourcesanspro-light-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-light-webfont.svg#source_sans_prolight") format("svg")
   font-weight: normal
   font-style: normal
 
 @font-face
   font-family: "source_sans_proitalic"
-  src: url("fonts/sourcesanspro-italic-webfont.eot")
-  src: url("fonts/sourcesanspro-italic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/sourcesanspro-italic-webfont.woff") format("woff"), url("fonts/sourcesanspro-italic-webfont.ttf") format("truetype"), url("fonts/sourcesanspro-italic-webfont.svg#source_sans_proitalic") format("svg")
+  src: url("../fonts/sourcesanspro-italic-webfont.eot")
+  src: url("../fonts/sourcesanspro-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-italic-webfont.woff") format("woff"), url("../fonts/sourcesanspro-italic-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-italic-webfont.svg#source_sans_proitalic") format("svg")
   font-weight: normal
   font-style: normal
 
@@ -69,6 +69,8 @@ $color-names: blue yellow green violet red
       background: $light-color
     tr.custom.extra-highlight
       background: darken($light-color, 10)
+    section[data-type="sect1"]
+      border-top: 18px solid $color
   div[data-type="part"].#{nth($color-names, $i)}
     background: darken($color, 5)
     .content
@@ -77,6 +79,17 @@ $color-names: blue yellow green violet red
       background: $color
     + .navigation ul
       background: lighten(desaturate($color, 2), 8)
+
+.icon
+  width: 240px
+  height: 240px
+  border-radius: 120px
+  margin: .5in auto
+
+.icon img
+  width: 150px
+  height: 150px
+  margin: 45px
 
 @page
   /* defining overall trim size and page layout
@@ -89,6 +102,7 @@ $color-names: blue yellow green violet red
     float: outside
     width: 1.1in
     clear: both
+
 
 head title
   display: none
@@ -106,47 +120,24 @@ figure[data-type="cover"]
   padding: 0
 
 
-@page :left
-  margin-left: 1.625in
-  margin-right: 1in
-  @bottom-left-corner
+@page
+  margin-left: .75in
+  margin-right: .75in
+  @bottom-right-corner
     font-family: "source_sans_proregular", sans-serif
     font-size: 9pt
     text-align: left
-    margin-left: 0.375in
     margin-top: 5pt
+    margin-left: .5in
 
   @top-left
     font-family: "source_sans_proregular", sans-serif
     font-size: 8pt
     text-align: left
-    margin-left: -0.65in
     margin-top: 6pt
 
   @sidenote
     margin-left: -1.25in
-
-
-@page :right
-  margin-right: 1.625in
-  margin-left: 1in
-  @bottom-right-corner
-    font-family: "source_sans_proregular", sans-serif
-    font-size: 9pt
-    text-align: right
-    margin-top: 5pt
-    margin-right: 0.375in
-
-  @top-right
-    font-family: "source_sans_proregular", sans-serif
-    font-size: 8pt
-    text-align: right
-    margin-right: -0.65in
-    margin-top: 6pt
-
-  @sidenote
-    margin-right: -1.25in
-
 
 @page :blank
   /* defining a truly blank master page
@@ -202,13 +193,20 @@ h1 + p, h2 + p, h3 + P
   /* first paragraph following a heading has no indent
 
 p, dd
-  /* general text styles
   font-family: "source_sans_proregular", sans-serif
-  text-indent: 0.167in
-  font-size: 9.5pt
-  line-height: 13pt
-  margin: 0
+  text-indent: 0in
+  font-size: 11.5pt
+  line-height: 15pt
+  margin-bottom: 13pt
   text-align: justify
+
+h3
+  font-family: "source_sans_probold", sans-serif
+  font-size: 14pt
+  color: #aaaaaa
+  text-transform: uppercase
+  margin-top: 20pt
+  margin-bottom: 5pt
 
 /* global styles
 
@@ -216,6 +214,7 @@ body
   -ah-kerning-mode: pair
   -ah-hyphenate-hyphenated-word: false
   hyphens: auto
+  font-family: "source_sans_proregular", sans-serif
 
 /* general inlines
 
@@ -257,7 +256,6 @@ section
     /* titlepages always start on a right-hand page
     page-break-after: always
   &[data-type="halftitlepage"] h1, &[data-type="titlepage"] h1
-    font-family: Merriweather, serif
     border-bottom: 0.5pt solid cmyk(0%, 0%, 0%, 100%)
     margin-top: 126pt
     padding-bottom: 7pt
@@ -275,7 +273,6 @@ section
       line-height: 24pt
       font-weight: normal
     p[data-type="author"]
-      font-family: Merriweather, serif
       font-size: 11pt
       margin-top: 66pt
   &[data-type="copyright-page"]
@@ -307,6 +304,35 @@ section
 /* dedication
 
 /* table of contents
+section[data-type="chapter"]
+  position: relative
+  header
+    border-bottom: 18px solid #eeeeee
+    margin-bottom: 4em
+    h1
+      font-family: 'source_sans_probold', sans-serif
+      font-size: 32pt
+      margin-top: 0
+      margin-bottom: 0
+      text-align: center
+      text-transform: uppercase
+      color: #444
+      -webkit-font-smoothing: antialiased
+    h2
+
+    p
+      font-family: 'source_sans_prolight', sans-serif
+      text-align: center
+      text-transform: uppercase
+      margin: 0pt 16pt
+      letter-spacing: 1pt
+      font-size: 16pt
+      padding: .3in
+      &[data-type="author"]
+        color: #aaa
+        font-size: 12pt
+        margin-bottom: .5in
+        page-break-after: always
 
 /* paged media
 @page toc:first
@@ -317,21 +343,12 @@ section
     content: none
 
 
-@page toc:left
+@page toc
   @bottom-left-corner
     content: counter(page, lower-roman)
 
   @top-left
     content: "Table of Contents"
-
-
-@page toc:right
-  @bottom-right-corner
-    content: counter(page, lower-roman)
-
-  @top-right
-    content: "Table of Contents"
-
 
 @page toc:blank
   @bottom-left-corner
@@ -350,7 +367,6 @@ section
 nav[data-type="toc"]
   > h1
     /* table of contents heading
-    font-family: Merriweather, serif
     font-size: 16pt
     line-height: 22pt
     margin-top: 87pt
@@ -451,15 +467,18 @@ nav[data-type="toc"] li[data-type="appendix"]
 /* shared styles for all chapter-level headings
 
 section
-  &[data-type="preface"] > h1, &[data-type="foreword"] > h1, &[data-type="chapter"] > h1, &[data-type="appendix"] > h1
-    font-family: 'Merriweather', serif
+  &[data-type="preface"] > h1, &[data-type="foreword"] > h1, &[data-type="appendix"] > h1
+    font-family: "source_sans_probold", sans-serif
     line-height: 22pt
-    margin-bottom: 0.9in
+    margin-bottom: 0.25in
     margin-top: 0.5in
-    text-align: right
+    text-align: left
+    font-size: 32pt
+    text-transform: uppercase
+    color: #aaa
   &[data-type="preface"] > h1, &[data-type="foreword"] > h1
     string-set: ChapterTitle self
-  &[data-type="chapter"] > h1
+  &[data-type="chapter"] > h1, section[data-type="chapter"] > header > h1
     string-set: ChapterTitle self, SectionTitle self
     counter-increment: ChapterNumber
   &[data-type="appendix"] > h1
@@ -489,10 +508,13 @@ h1, h2, h3, h4, h5, h6
   text-align: left
   font-weight: normal
 
+section[data-type="sect1"]
+  margin-top: .5in
+  padding-top: .5in
+
 section
   &[data-type="sect1"] > h1
     /* A-level headings
-    font-family: 'Merriweather', serif
     font-weight: bold
     font-size: 12pt
     line-height: 16pt
@@ -500,28 +522,12 @@ section
     margin-bottom: 14pt
     string-set: SectionTitle self
     /* A-heads are also displayed in chapter footers
-  &[data-type="sect2"] > h2
-    /* B-level headings
-    font-family: "source_sans_proregular", sans-serif
-    font-weight: bold
-    font-size: 11pt
-    line-height: 12pt
-    margin-top: 18pt
-    margin-bottom: 13pt
-  &[data-type="sect3"] > h3
-    /* C-level headings
-    font-family: "source_sans_prosemibold", sans-serif
-    font-size: 9.5pt
-    margin-top: 14pt
-    margin-bottom: 10pt
-    line-height: 14pt
-    text-transform: uppercase
   &[data-type="preface"]
     > h1
       font-size: 16pt
       font-weight: normal
     page: preface
-    page-break-before: right
+    //page-break-before: right
     /* forces the preface to start on a right hand page
     counter-reset: FigureNumber TableNumber ExampleNumber EquationNumber footnote
     /* setting auto-numbers for figures, tables, and footnotes to start at 1
@@ -530,7 +536,7 @@ section
       font-size: 16pt
       font-weight: normal
     page: foreword
-    page-break-before: right
+    //page-break-before: right
     /* forces the foreword to start on a right hand page
     counter-reset: FigureNumber TableNumber ExampleNumber EquationNumber footnote
     /* setting auto-numbers for figures, tables, and footnotes to start at 1
@@ -545,21 +551,12 @@ section
     content: none
 
 
-@page preface:left
+@page preface
   @top-left
     content: string(ChapterTitle)
 
   @bottom-left-corner
     content: counter(page, lower-roman)
-
-
-@page preface:right
-  @top-right
-    content: string(ChapterTitle)
-
-  @bottom-right-corner
-    content: counter(page, lower-roman)
-
 
 @page preface:blank
   @bottom-left-corner
@@ -584,22 +581,12 @@ section
   @top-right
     content: none
 
-
-@page foreword:left
+@page foreword
   @top-left
     content: string(ChapterTitle)
 
   @bottom-left-corner
     content: counter(page, lower-roman)
-
-
-@page foreword:right
-  @top-right
-    content: string(ChapterTitle)
-
-  @bottom-right-corner
-    content: counter(page, lower-roman)
-
 
 @page foreword:blank
   @bottom-left-corner
@@ -619,24 +606,33 @@ section
 
 div[data-type="part"]
   page: blank
-  page-break-before: right
-  > h1
-    font-family: 'OpenSans-CondBold', sans-serif
-    font-size: 18pt
+  page-break-before: always
+  margin: -.75in
+  width: 9in
+  padding: .75in
+  padding-bottom: 6in
+  max-width: 100%
+  min-height: 100%
+  height: auto
+  color: white
+  header h1
+    font-family: "source_sans_probold", sans-serif
+    font-size: 30pt
     line-height: 22pt
     text-align: center
+    margin-left: 0
+    margin-right: 0
     margin-top: 0
-    margin-bottom: 28pt
+    padding: .5in
     counter-increment: PartNumber
-    &:before
-      font-family: 'OpenSans-Semibold', sans-serif
-      font-size: 11pt
-      text-transform: uppercase
-      content: "Part " counter(PartNumber)
+    text-transform: uppercase
+    color: #fff
+    img 
       display: block
-      text-align: center
-      margin-top: 72pt
-      margin-bottom: 34pt
+      margin-bottom: .5in
+  p
+    color: #fff
+    font-size: 12pt
 
 /* chapters
 
@@ -644,36 +640,18 @@ div[data-type="part"]
   @top-right
     content: none
 
+  @top-left
+    content: none
 
-@page chapter:left
-  @bottom-left-corner
+  @bottom-right-corner
+    content: none
+
+@page chapter
+  @bottom-right-corner
     content: counter(page)
 
   @top-left
     content: "CHAPTER " counter(ChapterNumber) ": " string(ChapterTitle)
-
-
-@page chapter:right
-  @bottom-right-corner
-    content: counter(page)
-
-  @top-right
-    content: string(SectionTitle)
-
-
-@page chapter:blank
-  @bottom-left-corner
-    content: none
-
-  @bottom-right-corner
-    content: none
-
-  @top-right
-    content: none
-
-  @top-left
-    content: none
-
 
 /* page number resets to 1 on the first chapter
 
@@ -682,7 +660,7 @@ section
     counter-reset: page 1
   &[data-type="chapter"]
     page: chapter
-    page-break-before: right
+    page-break-before: always
     /* forces new chapters to start on a right hand page
     counter-reset: TableNumber FigureNumber ExampleNumber EquationNumber footnote
   &[data-type="appendix"]
@@ -705,14 +683,12 @@ section
   @bottom-right
     content: "Appendix " counter(AppendixNumber, upper-alpha) ", " string(ChapterTitle)
 
-
 @page appendix:right
   @bottom-right
     content: counter(page)
 
   @bottom-left
     content: string(SectionTitle)
-
 
 /* lists
 
@@ -754,7 +730,6 @@ table caption
   margin-bottom: 5pt
   page-break-after: avoid
   text-align: left
-  font-family: Merriweather, serif
   font-style: italic
   font-size: 7.5pt
   line-height: 10pt
@@ -781,6 +756,7 @@ th
   border-top: 0.5pt solid cmyk(0%, 0%, 0%, 100%)
   border-bottom: 0.5pt solid cmyk(0%, 0%, 0%, 100%)
   padding: 4.5pt 0.0625in 4.5pt 0.0625in
+  color: #fff
 
 td
   padding: 4.5pt 0.0625in 4.5pt 0.0625in
@@ -788,6 +764,17 @@ td
   font-family: "source_sans_proregular", sans-serif
   font-size: 9pt
   line-height: 10pt
+
+th, td
+  border-bottom: 1px solid $gray
+  border-left: 1px solid $gray
+  &:last-child
+    border-right: 1px solid $gray
+
+tr
+  border-width: 0px
+  &:first-child
+    border-top: 1px solid $gray
 
 table p
   /* table body text
@@ -813,11 +800,8 @@ td
 
 figure
   display: block
-  border-top: 0.5pt solid cmyk(0%, 0%, 0%, 100%)
-  border-bottom: 0.5pt solid cmyk(0%, 0%, 0%, 100%)
-  margin: 20pt -1.625in
-  padding: 8.64pt 1.625in
-  width: 4.375in
+  margin: 16pt 0 
+  padding: 8.64pt 0
   clear: both
   text-align: center
   /* in AH Land, this is how you center an img in a block
@@ -830,11 +814,13 @@ figure
     margin-right: -1.25in
     width: 1in
     text-align: left
-    font-family: Merriweather, serif
     font-style: italic
     font-size: 7.5pt
     line-height: 10pt
     hyphens: none
+  img
+    margin: 0 auto
+    text-align: center
 
 figcaption:before
   font-family: "source_sans_probold", sans-serif
@@ -858,7 +844,7 @@ img
   margin: 15pt auto
 
 figure img
-  max-width: 4.375in
+  max-width: 5.5in
   margin: 0 auto
 
 dt img
@@ -892,13 +878,11 @@ aside
   p, dd
     /* sidebar text
     font-size: 7.5pt
-    font-family: Merriweather, serif
     line-height: 11.5pt
     text-indent: 0
     margin-bottom: 6pt
   dt
     font-size: 7.5pt
-    font-family: Merriweather, serif
     font-weight: bold
 
 /* admonitions
@@ -913,14 +897,12 @@ div
     page-break-inside: avoid
   &[data-type="note"] p, &[data-type="warning"] p
     /* admon text
-    font-family: Merriweather, serif
     text-align: left
     text-indent: 0
     font-size: 7.5pt
     line-height: 11pt
     margin-bottom: 6pt
   &[data-type="note"] li, &[data-type="warning"] li
-    font-family: Merriweather, serif
     font-size: 7.5pt
   &[data-type="note"] h1, &[data-type="warning"] h1
     /* admonition titles
@@ -959,7 +941,6 @@ div[data-type="example"]
     margin-bottom: 5pt
     page-break-after: avoid
     text-align: left
-    font-family: Merriweather, serif
     font-style: italic
     font-size: 7.5pt
     line-height: 10pt
@@ -1008,7 +989,6 @@ div
     width: 1in
     page-break-inside: avoid
     text-align: left
-    font-family: Merriweather, serif
     font-style: italic
     font-size: 7.5pt
     line-height: 10pt
@@ -1027,3 +1007,4 @@ div
 /* ------------------- PAGEBREAK HANDLING -------------------
 
 /* force a page break
+
