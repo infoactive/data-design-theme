@@ -775,7 +775,7 @@ section[data-type="foreword"] {
     content: none; } }
 /* parts */
 div[data-type="part"],
-div[data-type="titlepage"] {
+section[data-type="titlepage"] {
   page: blank;
   page-break-before: always;
   margin: -0.75in;
@@ -788,7 +788,7 @@ div[data-type="titlepage"] {
   height: auto;
   color: white; }
   div[data-type="part"] header h1,
-  div[data-type="titlepage"] header h1 {
+  section[data-type="titlepage"] header h1 {
     font-family: "source_sans_probold", sans-serif;
     font-size: 30pt;
     line-height: 22pt;
@@ -801,11 +801,11 @@ div[data-type="titlepage"] {
     text-transform: uppercase;
     color: white; }
     div[data-type="part"] header h1 img,
-    div[data-type="titlepage"] header h1 img {
+    section[data-type="titlepage"] header h1 img {
       display: block;
       margin-bottom: 0.5in; }
   div[data-type="part"] p,
-  div[data-type="titlepage"] p {
+  section[data-type="titlepage"] p {
     color: white;
     font-size: 12pt; }
 
@@ -949,24 +949,14 @@ figure {
   figure figcaption {
     display: block;
     clear: both;
-    width: 6in;
+    width: 5in;
+    margin: 0 auto;
     text-align: left;
-    font-style: italic;
     font-size: 7.5pt;
-    line-height: 10pt;
-    hyphens: none; }
+    line-height: 10pt; }
   figure img {
     margin: 0 auto;
     text-align: center; }
-
-figcaption:before {
-  font-family: "source_sans_probold", sans-serif;
-  font-style: normal;
-  font-size: 8.5pt;
-  counter-increment: FigureNumber;
-  content: "FIGURE " counter(ChapterNumber) "-" counter(FigureNumber);
-  display: block;
-  margin-bottom: 7.2pt; }
 
 section[data-type="preface"] figcaption:before {
   content: "Figure P-" counter(FigureNumber) ". "; }
