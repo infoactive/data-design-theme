@@ -513,10 +513,14 @@ section[data-type="titlepage"] {
   section[data-type="titlepage"] .credits {
     position: absolute;
     bottom: 10pt;
-    margin-bottom: -0.5in;
-    line-height: 150%; }
+    line-height: 150%;
+    width: 100%;
+    margin-bottom: -0.6in; }
     section[data-type="titlepage"] .credits p {
-      text-align: center; }
+      text-align: center;
+      color: #d1d2d4;
+      width: 80%;
+      margin: 12pt auto; }
 
 /* styling and positioning for author names */
 /* copyright page */
