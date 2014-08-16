@@ -434,10 +434,6 @@ section[data-type="preface"] > h1 + p, section[data-type="foreword"] > h1 + p {
   text-indent: 0;
   /* first paragraph following a heading has no indent */ }
 
-div[data-type="part"] > h1 + p {
-  text-indent: 0;
-  /* first paragraph following a heading has no indent */ }
-
 section[data-type="chapter"] > h1 + p, section[data-type="chapter"] > h1 + div.author p {
   text-indent: 0;
   /* first paragraph following a heading has no indent */ }
@@ -511,7 +507,8 @@ section[data-type="titlepage"] {
     margin-bottom: 2em;
     font-size: 1.6em;
     padding: 0 2em;
-    line-height: 140%; }
+    line-height: 140%;
+    color: white; }
   section[data-type="titlepage"] .credits {
     position: relative;
     margin-top: 13em;
@@ -785,8 +782,7 @@ section[data-type="titlepage"] {
   page-break-before: always;
   margin: -0.75in;
   padding: 0.75in;
-  padding-bottom: 0;
-  height: 9.18759in; }
+  height: 4.18759in; }
   div[data-type="part"] header h1,
   section[data-type="titlepage"] header h1 {
     font-family: "source_sans_probold", sans-serif;

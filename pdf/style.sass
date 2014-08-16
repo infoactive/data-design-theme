@@ -130,10 +130,6 @@ section
     text-indent: 0
     /* first paragraph following a heading has no indent
 
-div[data-type="part"] > h1 + p
-  text-indent: 0
-  /* first paragraph following a heading has no indent
-
 section
   &[data-type="chapter"] > h1 +
     p, div.author p
@@ -211,13 +207,14 @@ section[data-type="titlepage"]
     font-size: 4em
     text-align: center
     text-transform: uppercase
-    color: #ffffff
+    color: #fff
   h2
     margin-top: 20px
     margin-bottom: 2em
     font-size: 1.6em
     padding: 0 2em
     line-height: 140%
+    color: #fff
   .credits
     position: relative
     margin-top: 13em
@@ -543,8 +540,7 @@ section[data-type="titlepage"]
   page-break-before: always
   margin: -.75in
   padding: .75in
-  padding-bottom: 0
-  height: 9.18759in
+  height: 4.18759in
   header h1
     font-family: "source_sans_probold", sans-serif
     font-size: 30pt
