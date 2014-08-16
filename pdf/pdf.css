@@ -513,7 +513,7 @@ section[data-type="titlepage"] {
   section[data-type="titlepage"] .credits {
     position: absolute;
     bottom: 10pt;
-    margin-bottom: -0.25in;
+    margin-bottom: -0.5in;
     line-height: 150%; }
     section[data-type="titlepage"] .credits p {
       text-align: center; }
