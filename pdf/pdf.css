@@ -770,13 +770,33 @@ section[data-type="foreword"] {
     content: none; }
   @top-left {
     content: none; } }
+span[data-type="footnote"] {
+  -ah-float: footnote;
+  font-size: 8pt;
+  line-height: 10pt;
+  margin-left: 8pt;
+  margin-bottom: 3pt;
+  text-align: left;
+  text-indent: 0; }
+
+::footnote-call,
+::footnote-marker {
+  content: counter(footnote,decimal);
+  line-height: 5pt; }
+
+::footnote-call {
+  font-size: 6pt; }
+
+::footnote-marker {
+  font-size: 7pt; }
+
 /* parts */
 div[data-type="part"],
 section[data-type="titlepage"] {
   page: blank;
   page-break-before: always;
   margin: -0.75in;
-  width: 9in;
+  width: 100%;
   padding: 0.75in;
   padding-bottom: 6in;
   max-width: 100%;
@@ -945,10 +965,11 @@ figure {
   figure figcaption {
     display: block;
     clear: both;
-    width: 5in;
-    margin: 0 auto;
+    max-width: 5.5in;
+    margin: 8.5pt auto 0;
+    padding: 7pt 8.5pt;
     text-align: left;
-    font-size: 7.5pt;
+    font-size: 6pt;
     line-height: 10pt; }
   figure img {
     margin: 0 auto;
