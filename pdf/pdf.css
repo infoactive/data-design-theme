@@ -784,8 +784,9 @@ section[data-type="titlepage"] {
   page: blank;
   page-break-before: always;
   margin: -0.75in;
-  width: 100%;
+  width: 7in;
   padding: 0.75in;
+  padding-bottom: 6in;
   min-height: 100%;
   height: auto;
   color: white; }
