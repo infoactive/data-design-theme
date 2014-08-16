@@ -771,7 +771,6 @@ section[data-type="foreword"] {
   @top-left {
     content: none; } }
 span[data-type="footnote"] {
-  -ah-float: footnote;
   font-size: 8pt;
   line-height: 10pt;
   margin-left: 8pt;
