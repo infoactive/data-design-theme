@@ -816,13 +816,13 @@ section[data-type="titlepage"] {
     content: none; }
   @top-left {
     content: none; }
-  @bottom-right-corner {
+  @bottom-left-corner {
     content: none; } }
 @page chapter {
-  @bottom-right-corner {
-    content: counter(page); }
   @bottom-left-corner {
-    content: counter(page); }
+    color: #d1d2d4;
+    content: counter(page);
+    font-family: "source_sans_proregular", sans-serif; }
   @top-left {
     content: "CHAPTER " counter(ChapterNumber) ": " string(ChapterTitle); } }
 /* page number resets to 1 on the first chapter */
