@@ -770,6 +770,15 @@ section[data-type="foreword"] {
     content: none; }
   @top-left {
     content: none; } }
+span[data-type="footnote"] {
+  -ah-float: footnote;
+  font-size: 8pt;
+  line-height: 10pt;
+  margin-left: 8pt;
+  margin-bottom: 3pt;
+  text-align: left;
+  text-indent: 0; }
+
 /* parts */
 div[data-type="part"],
 section[data-type="titlepage"] {
