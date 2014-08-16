@@ -497,26 +497,32 @@ section[data-type="titlepage"] {
   section[data-type="titlepage"] h1 {
     font-family: "source_sans_probold", sans-serif;
     line-height: 120%;
-    padding-top: 1.5em;
-    font-size: 4em;
+    padding-top: 0.75em;
+    font-size: 80pt;
     text-align: center;
     text-transform: uppercase;
     color: white; }
   section[data-type="titlepage"] h2 {
     margin-top: 20px;
     margin-bottom: 2em;
-    font-size: 1.6em;
+    font-size: 20pt;
     padding: 0 2em;
     line-height: 140%;
     color: white;
     text-align: center; }
   section[data-type="titlepage"] .credits {
-    position: relative;
-    margin-top: 13em;
-    margin-bottom: 5em;
+    position: absolute;
+    bottom: 0pt;
+    margin-bottom: -0.25in;
     width: 100%;
     padding: 0 1em;
     line-height: 150%; }
+    section[data-type="titlepage"] .credits p {
+      width: 100%;
+      text-align: center; }
+    section[data-type="titlepage"] .credits p:not(.author) {
+      width: 80%;
+      margin: 0 auto; }
 
 /* styling and positioning for author names */
 /* copyright page */
