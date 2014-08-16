@@ -512,14 +512,11 @@ section[data-type="titlepage"] {
     text-align: center; }
   section[data-type="titlepage"] .credits {
     position: absolute;
-    bottom: 0pt;
+    bottom: 10pt;
     margin-bottom: -0.25in;
-    width: 100%;
-    padding: 0 1em;
     line-height: 150%; }
     section[data-type="titlepage"] .credits p {
-      text-align: center;
-      margin: 0 auto 14pt; }
+      text-align: center; }
 
 /* styling and positioning for author names */
 /* copyright page */
