@@ -498,11 +498,13 @@ section[data-type="titlepage"] {
     font-family: "source_sans_probold", sans-serif;
     line-height: 116%;
     font-size: 80pt;
+    margin-bottom: 0;
+    margin-top: 10pt;
     text-align: center;
     text-transform: uppercase;
     color: white; }
   section[data-type="titlepage"] h2 {
-    margin-top: 0;
+    margin-top: 10pt;
     font-size: 20pt;
     padding: 0 2em;
     line-height: 140%;
