@@ -786,10 +786,8 @@ section[data-type="titlepage"] {
   margin: -0.75in;
   width: 7in;
   padding: 0.75in;
-  padding-bottom: 6in;
   min-height: 100%;
-  height: auto;
-  color: white; }
+  height: 9.18759in; }
   div[data-type="part"] header h1,
   section[data-type="titlepage"] header h1 {
     font-family: "source_sans_probold", sans-serif;
@@ -822,6 +820,8 @@ section[data-type="titlepage"] {
     content: none; } }
 @page chapter {
   @bottom-right-corner {
+    content: counter(page); }
+  @bottom-left-corner {
     content: counter(page); }
   @top-left {
     content: "CHAPTER " counter(ChapterNumber) ": " string(ChapterTitle); } }
