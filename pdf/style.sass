@@ -5,6 +5,34 @@
 
 @import '../shared/shared-styles'
 
+@font-face
+  font-family: 'source_sans_proregular'
+  src: url('../shared/fonts/sourcesanspro-regular-webfont.eot')
+  src: url('../shared/fonts/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../shared/fonts/sourcesanspro-regular-webfont.woff') format('woff'), url('../shared/fonts/sourcesanspro-regular-webfont.ttf') format('truetype'), url('../shared/fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'source_sans_probold'
+  src: url('../shared/fonts/sourcesanspro-bold-webfont.eot')
+  src: url('../shared/fonts/sourcesanspro-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../shared/fonts/sourcesanspro-bold-webfont.woff') format('woff'), url('../shared/fonts/sourcesanspro-bold-webfont.ttf') format('truetype'), url('../shared/fonts/sourcesanspro-bold-webfont.svg#source_sans_probold') format('svg')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'source_sans_prolight'
+  src: url('../shared/fonts/sourcesanspro-light-webfont.eot')
+  src: url('../shared/fonts/sourcesanspro-light-webfont.eot?#iefix') format('embedded-opentype'), url('../shared/fonts/sourcesanspro-light-webfont.woff') format('woff'), url('../shared/fonts/sourcesanspro-light-webfont.ttf') format('truetype'), url('../shared/fonts/sourcesanspro-light-webfont.svg#source_sans_prolight') format('svg')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'source_sans_proitalic'
+  src: url('../shared/fonts/sourcesanspro-italic-webfont.eot')
+  src: url('../shared/fonts/sourcesanspro-italic-webfont.eot?#iefix') format('embedded-opentype'), url('../shared/fonts/sourcesanspro-italic-webfont.woff') format('woff'), url('../shared/fonts/sourcesanspro-italic-webfont.ttf') format('truetype'), url('../shared/fonts/sourcesanspro-italic-webfont.svg#source_sans_proitalic') format('svg')
+  font-weight: normal
+  font-style: normal
+
 section[data-type="sect1"]
   border-top: 18px solid $gray
 
@@ -514,10 +542,10 @@ section[data-type="titlepage"]
   page: blank
   page-break-before: always
   margin: -.75in
-  width: 7in
   padding: .75in
-  min-height: 100%
+  padding-bottom: 0
   height: 9.18759in
+  max-height: 9.18759in
   header h1
     font-family: "source_sans_probold", sans-serif
     font-size: 30pt
@@ -605,6 +633,7 @@ ul li, ol li
   font-size: 11.5pt
   line-height: 120%
   margin-bottom: 7pt
+  margin-left: 7pt
 
 dl
   /* definition lists
@@ -698,9 +727,9 @@ figure
     clear: both
     max-width: 5.5in
     margin: 8.5pt auto 0
-    padding: 7pt 8.5pt
+    padding: 1pt 20pt
     text-align: left
-    font-size: 6pt
+    font-size: 5pt
     line-height: 10pt
   img
     margin: 0 auto
@@ -810,6 +839,7 @@ div
 /* contributors
 
 section[data-type="acknowledgments"]
+  max-width: 7in
 
   *
     -webkit-margin-before: 0
@@ -819,7 +849,7 @@ section[data-type="acknowledgments"]
     line-height: 100%
 
   section
-    float: left
+    max-width: 7in
 
   .header
     display: table
@@ -843,15 +873,17 @@ section[data-type="acknowledgments"]
         color: #aaa
 
   .contributor
-    width: 3in
-    margin: 0 .2in
+    width: 2.5in
+    margin: 0 .1in
     display: inline-block
     margin-bottom: 28px
     position: relative
-    height: 400px
+    height: 300px
     background: #f4f4f4
+    float: left
+    overflow: hidden
     .rock-star
-      background: url('../shared/images/contributors/star.png') 98% 50% no-repeat $green
+      background: url('../shared/images/star.png') 98% 50% no-repeat $green
 
   img.profile
     height: 88px
@@ -880,11 +912,11 @@ section[data-type="acknowledgments"]
         float: right
         text-indent: -9999px
         opacity: .4
-        background: url('../shared/images/contributors/website.png')
+        background: url('../shared/images/website.png')
         &:hover
           opacity: 1
       .twitter
-        background: url('../shared/images/contributors/twitter.png')
+        background: url('../shared/images/twitter.png')
 
   .role
     float: left

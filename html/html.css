@@ -135,8 +135,8 @@ h2 {
     color: white;
     padding: 0.7em 0 0.7em 3em;
     text-transform: uppercase;
-    background: url("../../images/shared-icons/no.png") 1em 50% no-repeat #d1d2d4;
-    @retina-image('../../images/shared-icons/no', 20px 20px); }
+    background: url("../shared/images/no.png") 1em 50% no-repeat #d1d2d4;
+    @retina-image('../shared/images/no', 20px 20px); }
 
 h4 {
   font-family: "source_sans_probold", sans-serif;
@@ -183,11 +183,11 @@ table.good-and-bad td {
   padding: 1.3em 1.5em; }
 
 table.question-and-answer th:nth-child(1) {
-  background: url("../../images/shared-icons/search.png") 1.2em 0.5em no-repeat #444444;
-  @retina-image('../../images/shared-icons/search', 24px 24px); }
+  background: url("../shared/images/search.png") 1.2em 0.5em no-repeat #444444;
+  @retina-image('../shared/images/search', 24px 24px); }
 table.question-and-answer th:nth-child(2) {
-  background: url("../../images/shared-icons/arrow.png") 1.2em 0.5em no-repeat #41a2ba;
-  @retina-image('../../images/shared-icons/arrow', 24px 24px); }
+  background: url("../shared/images/arrow.png") 1.2em 0.5em no-repeat #41a2ba;
+  @retina-image('../shared/images/arrow', 24px 24px); }
 table.question-and-answer td {
   width: 50%;
   padding: 1.5em;
@@ -203,29 +203,29 @@ table.question-and-answer td:nth-child(2) h2 {
     margin-top: 0; }
 
 table.good-and-bad th:nth-child(1) {
-  background: url("../../images/shared-icons/good.png") 1.2em 0.5em no-repeat #89c557;
-  @retina-image('../../images/shared-icons/good', 24px 24px); }
+  background: url("../shared/images/good.png") 1.2em 0.5em no-repeat #89c557;
+  @retina-image('../shared/images/good', 24px 24px); }
 table.good-and-bad th:nth-child(2) {
-  background: url("../../images/shared-icons/bad.png") 1.2em 0.5em no-repeat #d1d2d4;
-  @retina-image('../../images/shared-icons/bad', 24px 24px); }
+  background: url("../shared/images/bad.png") 1.2em 0.5em no-repeat #d1d2d4;
+  @retina-image('../shared/images/bad', 24px 24px); }
 
 table.yes-and-no th:nth-child(1) {
-  background: url("../../images/shared-icons/yes.png") 1.2em 0.5em no-repeat #89c557;
-  @retina-image('../../images/shared-icons/yes', 24px 24px); }
+  background: url("../shared/images/yes.png") 1.2em 0.5em no-repeat #89c557;
+  @retina-image('../shared/images/yes', 24px 24px); }
 table.yes-and-no th:nth-child(2) {
-  background: url("../../images/shared-icons/no.png") 1.2em 0.5em no-repeat #d1d2d4;
-  @retina-image('../../images/shared-icons/no', 24px 24px); }
+  background: url("../shared/images/no.png") 1.2em 0.5em no-repeat #d1d2d4;
+  @retina-image('../shared/images/no', 24px 24px); }
 table.yes-and-no td {
   width: 50%; }
 table.yes-and-no td:nth-child(2) {
   background: #efefef; }
 
 table.sections th:nth-child(1) {
-  background: url("../../images/shared-icons/sections.png") 1.2em no-repeat #444444;
-  @retina-image('../../images/shared-icons/sections', 24px 24px); }
+  background: url("../shared/images/sections.png") 1.2em no-repeat #444444;
+  @retina-image('../shared/images/sections', 24px 24px); }
 table.sections th:nth-child(2) {
-  background: url("../../images/shared-icons/add.png") 1.2em no-repeat #41a2ba;
-  @retina-image('../../images/shared-icons/add', 24px 24px); }
+  background: url("../shared/images/add.png") 1.2em no-repeat #41a2ba;
+  @retina-image('../shared/images/add', 24px 24px); }
 table.sections h2 {
   font-family: "source_sans_prosemibold", sans-serif;
   color: #41a2ba;
@@ -269,8 +269,8 @@ div[data-type="sidebar"] {
   padding: 15px 40px 20px 40px; }
 
 div[data-type="warning"] {
-  background: url("../../images/shared-icons/warning.png") 1.6em 1.8em no-repeat #efefef;
-  @retina-image('../../images/shared-icons/warning', 50px 50px);
+  background: url("../shared/images/warning.png") 1.6em 1.8em no-repeat #efefef;
+  @retina-image('../shared/images/warning', 50px 50px);
   border-top: 12px solid #cf4627;
   padding-left: 110px; }
 
@@ -291,7 +291,8 @@ div[data-type="warning"] p {
   font-family: "source_sans_proregular", sans-serif;
   font-size: 1em;
   text-indent: 0in;
-  margin-top: 0.5em; }
+  margin-top: 0.5em;
+  margin-bottom: 0.5em; }
 
 div[data-type="example"] {
   padding: 1px 30px;
