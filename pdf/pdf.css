@@ -496,15 +496,12 @@ section[data-type="titlepage"] {
     text-decoration: underline; }
   section[data-type="titlepage"] h1 {
     font-family: "source_sans_probold", sans-serif;
-    line-height: 120%;
-    padding-top: 0.75em;
+    line-height: 116%;
     font-size: 80pt;
     text-align: center;
     text-transform: uppercase;
     color: white; }
   section[data-type="titlepage"] h2 {
-    margin-top: 20px;
-    margin-bottom: 2em;
     font-size: 20pt;
     padding: 0 2em;
     line-height: 140%;
@@ -519,9 +516,7 @@ section[data-type="titlepage"] {
     line-height: 150%; }
     section[data-type="titlepage"] .credits p {
       width: 100%;
-      text-align: center; }
-    section[data-type="titlepage"] .credits p:not(.author) {
-      width: 80%;
+      text-align: center;
       margin: 0 auto; }
 
 /* styling and positioning for author names */
