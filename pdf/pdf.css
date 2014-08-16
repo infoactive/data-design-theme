@@ -493,7 +493,7 @@ body[data-type="book"] {
 
 /* frontmatter */
 section[data-type="titlepage"] {
-  background: url("../../images/cover.png") bottom repeat-x #41a2ba; }
+  background: url("cover.png") bottom repeat-x #41a2ba; }
   section[data-type="titlepage"] a {
     color: white;
     text-decoration: underline; }
@@ -783,7 +783,7 @@ div[data-type="part"],
 section[data-type="titlepage"] {
   page: blank;
   page-break-before: always;
-  margin: -0.75in;
+  margin: -0.75in 0;
   width: 100%;
   padding: 0.75in;
   padding-bottom: 6in;
