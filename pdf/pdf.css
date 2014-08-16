@@ -509,6 +509,13 @@ section[data-type="titlepage"] {
     padding: 0 2em;
     line-height: 140%;
     color: white; }
+  section[data-type="titlepage"] .credits {
+    position: relative;
+    margin-top: 13em;
+    margin-bottom: 5em;
+    width: 100%;
+    padding: 0 1em;
+    line-height: 150%; }
 
 /* styling and positioning for author names */
 /* copyright page */
@@ -772,11 +779,12 @@ span[data-type="footnote"] {
 /* parts */
 div[data-type="part"],
 section[data-type="titlepage"] {
+  page: blank;
   page-break-before: always;
   page-break-after: always;
   margin: -0.75in;
   padding: 0.75in;
-  height: 9.18759in; }
+  height: 8.5in; }
   div[data-type="part"] header h1,
   section[data-type="titlepage"] header h1 {
     font-family: "source_sans_probold", sans-serif;
