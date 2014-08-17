@@ -852,6 +852,15 @@ aside[data-type="footnotes"] a:not([target="_blank"]) {
     display: block;
     text-align: center; }
 
+p[data-type="author"] {
+  color: #aaaaaa;
+  font-size: 0.9em;
+  margin-bottom: 3em;
+  text-transform: uppercase; }
+  p[data-type="author"] em {
+    font-family: "source_sans_prolight", sans-serif;
+    color: #bbbbbb; }
+
 div.navbar {
   font-family: "source_sans_proregular", sans-serif;
   background-color: #dfdfdf;
