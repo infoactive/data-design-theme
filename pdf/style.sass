@@ -304,10 +304,8 @@ nav[data-type="toc"]
       margin-top: 14.4pt
       display: list-item
       page-break-after: avoid
-    &[data-type="chapter"] > a:after, &[data-type="appendix"] > a:after, &[data-type="index"] > a:after, &[data-type="glossary"] > a:after
+    &[data-type="chapter"] > a:after, &[data-type="appendix"] > a:after, &[data-type="index"] > a:after, &[data-type="glossary"] > a:after, &[data-type="acknowledgments"] > a:after, &[data-type="preface"] > a:after, &[data-type="foreword"] > a:after, &[data-type="introduction"] > a:after
       content: leader(space) target-counter(" ", page)
-    &[data-type="preface"] > a:after, &[data-type="foreword"] > a:after, &[data-type="introduction"] > a:after
-      content: leader(space) " " target-counter(" ", page)
     &[data-type="chapter"]:before
       content: "CHAPTER " counter(ChapterNumberTOC, decimal) ": "
       counter-increment: ChapterNumberTOC

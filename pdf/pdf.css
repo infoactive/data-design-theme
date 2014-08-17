@@ -601,10 +601,8 @@ nav[data-type="toc"] {
     margin-top: 14.4pt;
     display: list-item;
     page-break-after: avoid; }
-  nav[data-type="toc"] li[data-type="chapter"] > a:after, nav[data-type="toc"] li[data-type="appendix"] > a:after, nav[data-type="toc"] li[data-type="index"] > a:after, nav[data-type="toc"] li[data-type="glossary"] > a:after {
+  nav[data-type="toc"] li[data-type="chapter"] > a:after, nav[data-type="toc"] li[data-type="appendix"] > a:after, nav[data-type="toc"] li[data-type="index"] > a:after, nav[data-type="toc"] li[data-type="glossary"] > a:after, nav[data-type="toc"] li[data-type="acknowledgments"] > a:after, nav[data-type="toc"] li[data-type="preface"] > a:after, nav[data-type="toc"] li[data-type="foreword"] > a:after, nav[data-type="toc"] li[data-type="introduction"] > a:after {
     content: leader(space) target-counter(" ", page); }
-  nav[data-type="toc"] li[data-type="preface"] > a:after, nav[data-type="toc"] li[data-type="foreword"] > a:after, nav[data-type="toc"] li[data-type="introduction"] > a:after {
-    content: leader(space) " " target-counter(" ", page); }
   nav[data-type="toc"] li[data-type="chapter"]:before {
     content: "CHAPTER " counter(ChapterNumberTOC,decimal) ": ";
     counter-increment: ChapterNumberTOC;
