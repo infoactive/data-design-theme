@@ -269,15 +269,6 @@ div[data-type="sidebar"] {
 div[data-type="warning"] {
   border-top: 12px solid #cf4627;
   padding-left: 0; }
-  div[data-type="warning"]:before {
-    font-family: "icons";
-    content: "\e609";
-    color: #cf4627;
-    font-size: 3em;
-    margin: 15px 0 0 26px;
-    float: left; }
-  div[data-type="warning"] p, div[data-type="warning"] h1, div[data-type="warning"] h2, div[data-type="warning"] h3, div[data-type="warning"] ul {
-    margin-left: 100px; }
 
 div[data-type="note"] h1,
 div[data-type="warning"] h1 {
@@ -854,7 +845,8 @@ dd {
 table {
   margin: 12pt 0;
   border-collapse: collapse;
-  max-width: 6in; }
+  max-width: 6in;
+  overflow: hidden; }
 
 table caption {
   margin-bottom: 5pt;
@@ -959,7 +951,8 @@ div[data-type="warning"] {
   border-top: 8pt solid #cf4627;
   font-size: 11.5pt; }
   div[data-type="warning"] p, div[data-type="warning"] h1, div[data-type="warning"] h2, div[data-type="warning"] h3 {
-    margin-top: 0; }
+    margin-top: 0;
+    margin-left: 30px; }
 div[data-type="note"], div[data-type="warning"] {
   page-break-inside: avoid; }
 div[data-type="note"] p, div[data-type="warning"] p {
