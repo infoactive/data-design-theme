@@ -630,7 +630,7 @@ nav[data-type="toc"] li[data-type="appendix"] {
 
 /* preface, chapter, and appendix headings */
 /* shared styles for all chapter-level headings */
-section[data-type="preface"] > h1, section[data-type="foreword"] > h1, section[data-type="appendix"] > h1, section[data-type="introduction"], section[data-type="copyright-page"] {
+section[data-type="preface"] > h1, section[data-type="foreword"] > h1, section[data-type="appendix"] > h1, section[data-type="introduction"] > h1, section[data-type="copyright-page"] > h1 {
   font-family: "source_sans_probold", sans-serif;
   line-height: 22pt;
   margin-bottom: 0.25in;
