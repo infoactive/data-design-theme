@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -105,14 +111,19 @@ div[data-type="part"].red {
 
 h2 {
   margin-top: 2em;
-  margin-bottom: 0.5em; }
+  margin-bottom: 2em; }
   h2.avoid {
+    background: #d1d2d4;
     font-size: 1em;
     color: white;
-    padding: 0.7em 0 0.7em 3em;
-    text-transform: uppercase;
-    background: url("../shared/images/no.png") 1em 50% no-repeat #d1d2d4;
-    @retina-image('../shared/images/no', 20px 20px); }
+    padding: 0.7em 1em;
+    text-transform: uppercase; }
+    h2.avoid:before {
+      font-family: "icons";
+      content: "\e606";
+      margin-right: 1em;
+      top: 2px;
+      position: relative; }
 
 h4 {
   font-family: "source_sans_probold", sans-serif;
@@ -135,8 +146,17 @@ table.yes-and-no th,
 table.question-and-answer th,
 table.good-and-bad th {
   font-size: 1em;
-  padding: 0.5em 1.5em 0.5em 3.2em;
-  text-transform: uppercase; }
+  padding: 0.5em 0.5em 0.5em 1.3em;
+  text-transform: uppercase;
+  padding-top: -3px; }
+  table.yes-and-no th:before,
+  table.question-and-answer th:before,
+  table.good-and-bad th:before {
+    font-family: "icons";
+    margin-right: 0.9em;
+    position: relative;
+    font-size: 1em;
+    top: 2px; }
 table.yes-and-no tr,
 table.question-and-answer tr,
 table.good-and-bad tr {
@@ -158,12 +178,20 @@ table.question-and-answer td,
 table.good-and-bad td {
   padding: 1.3em 1.5em; }
 
+table.question-and-answer th {
+  padding: 0.3em 1em 0.5em; }
+  table.question-and-answer th:before {
+    font-size: 1.5em;
+    top: 6px;
+    margin-right: 0.6em; }
 table.question-and-answer th:nth-child(1) {
-  background: url("../shared/images/search.png") 1.2em 0.5em no-repeat #444444;
-  @retina-image('../shared/images/search', 24px 24px); }
+  background: #444444; }
+  table.question-and-answer th:nth-child(1):before {
+    content: "\e608"; }
 table.question-and-answer th:nth-child(2) {
-  background: url("../shared/images/arrow.png") 1.2em 0.5em no-repeat #41a2ba;
-  @retina-image('../shared/images/arrow', 24px 24px); }
+  background: #41a2ba; }
+  table.question-and-answer th:nth-child(2):before {
+    content: "\e60f"; }
 table.question-and-answer td {
   padding: 1.5em;
   padding-bottom: 1em; }
@@ -178,32 +206,28 @@ table.question-and-answer td:nth-child(2) h2 {
     margin-top: 0; }
 
 table.good-and-bad th:nth-child(1) {
-  background: url("../shared/images/good.png") 1.2em 0.5em no-repeat #89c557;
-  @retina-image('../shared/images/good', 24px 24px); }
+  background: #89c557; }
+  table.good-and-bad th:nth-child(1):before {
+    content: "\e604";
+    font-family: icons;
+    speak: none; }
 table.good-and-bad th:nth-child(2) {
-  background: url("../shared/images/bad.png") 1.2em 0.5em no-repeat #d1d2d4;
-  @retina-image('../shared/images/bad', 24px 24px); }
-
-table.yes-and-no th:nth-child(1) {
-  background: url("../shared/images/yes.png") 1.2em 0.5em no-repeat #89c557;
-  @retina-image('../shared/images/yes', 24px 24px); }
-table.yes-and-no th:nth-child(2) {
-  background: url("../shared/images/no.png") 1.2em 0.5em no-repeat #d1d2d4;
-  @retina-image('../shared/images/no', 24px 24px); }
-table.yes-and-no td:nth-child(2) {
+  background: #d1d2d4; }
+  table.good-and-bad th:nth-child(2):before {
+    content: "\e605"; }
+table.good-and-bad td:nth-child(2) {
   background: #efefef; }
 
-table.sections th:nth-child(1) {
-  background: url("../shared/images/sections.png") 1.2em no-repeat #444444;
-  @retina-image('../shared/images/sections', 24px 24px); }
-table.sections th:nth-child(2) {
-  background: url("../shared/images/add.png") 1.2em no-repeat #41a2ba;
-  @retina-image('../shared/images/add', 24px 24px); }
-table.sections h2 {
-  font-family: "source_sans_prosemibold", sans-serif;
-  color: #41a2ba;
-  font-size: 0.95em;
-  margin: 0; }
+table.yes-and-no th:nth-child(1) {
+  background: #89c557; }
+  table.yes-and-no th:nth-child(1):before {
+    content: "\e607"; }
+table.yes-and-no th:nth-child(2) {
+  background: #d1d2d4; }
+  table.yes-and-no th:nth-child(2):before {
+    content: "\e606"; }
+table.yes-and-no td:nth-child(2) {
+  background: #efefef; }
 
 blockquote {
   font-family: "source_sans_proitalic", sans-serif;
@@ -242,10 +266,17 @@ div[data-type="sidebar"] {
   padding: 15px 40px 20px 40px; }
 
 div[data-type="warning"] {
-  background: url("../shared/images/warning.png") 1.6em 1.8em no-repeat #efefef;
-  @retina-image('../shared/images/warning', 50px 50px);
   border-top: 12px solid #cf4627;
-  padding-left: 110px; }
+  padding-left: 0; }
+  div[data-type="warning"]:before {
+    font-family: "icons";
+    content: "\e609";
+    color: #cf4627;
+    font-size: 3em;
+    margin: 15px 0 0 26px;
+    float: left; }
+  div[data-type="warning"] p, div[data-type="warning"] h1, div[data-type="warning"] h2, div[data-type="warning"] h3, div[data-type="warning"] ul {
+    margin-left: 110px; }
 
 div[data-type="note"] h1,
 div[data-type="warning"] h1 {
@@ -363,12 +394,6 @@ html {
   src: url("../fonts/sourcesanspro-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-italic-webfont.woff") format("woff"), url("../fonts/sourcesanspro-italic-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-italic-webfont.svg#source_sans_proitalic") format("svg");
   font-weight: normal;
   font-style: normal; }
-@font-face {
-  font-family: "icons";
-  src: url("../fonts/icomoon.eot");
-  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal; }
 p, dd {
   font-family: "source_sans_proregular", sans-serif;
   font-size: 1em;
@@ -404,7 +429,7 @@ hr {
 
 section {
   max-width: 700px;
-  margin: 0 auto; }
+  margin: 0 auto 8em; }
 
 h3 {
   font-family: "source_sans_probold", sans-serif;
