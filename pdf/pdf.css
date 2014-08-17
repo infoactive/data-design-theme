@@ -110,9 +110,10 @@ h2 {
     font-size: 1em;
     color: white;
     padding: 0.7em 0 0.7em 3em;
-    text-transform: uppercase;
-    background: url("../shared/images/no.png") 1em 50% no-repeat #d1d2d4;
-    @retina-image('../shared/images/no', 20px 20px); }
+    text-transform: uppercase; }
+    h2.avoid:before {
+      font-family: "icons";
+      content: "\e606"; }
 
 h4 {
   font-family: "source_sans_probold", sans-serif;
@@ -135,8 +136,17 @@ table.yes-and-no th,
 table.question-and-answer th,
 table.good-and-bad th {
   font-size: 1em;
-  padding: 0.5em 1.5em 0.5em 3.2em;
-  text-transform: uppercase; }
+  padding: 0.3em 1em 0.5em;
+  text-transform: uppercase;
+  padding-top: -3px; }
+  table.yes-and-no th:before,
+  table.question-and-answer th:before,
+  table.good-and-bad th:before {
+    font-family: "icons";
+    font-size: 1.5em;
+    margin-right: 0.6em;
+    top: 6px;
+    position: relative; }
 table.yes-and-no tr,
 table.question-and-answer tr,
 table.good-and-bad tr {
@@ -159,11 +169,13 @@ table.good-and-bad td {
   padding: 1.3em 1.5em; }
 
 table.question-and-answer th:nth-child(1) {
-  background: url("../shared/images/search.png") 1.2em 0.5em no-repeat #444444;
-  @retina-image('../shared/images/search', 24px 24px); }
+  background: #444444; }
+  table.question-and-answer th:nth-child(1):before {
+    content: "\e608"; }
 table.question-and-answer th:nth-child(2) {
-  background: url("../shared/images/arrow.png") 1.2em 0.5em no-repeat #41a2ba;
-  @retina-image('../shared/images/arrow', 24px 24px); }
+  background: #41a2ba; }
+  table.question-and-answer th:nth-child(2):before {
+    content: "\e600"; }
 table.question-and-answer td {
   padding: 1.5em;
   padding-bottom: 1em; }
@@ -178,32 +190,26 @@ table.question-and-answer td:nth-child(2) h2 {
     margin-top: 0; }
 
 table.good-and-bad th:nth-child(1) {
-  background: url("../shared/images/good.png") 1.2em 0.5em no-repeat #89c557;
-  @retina-image('../shared/images/good', 24px 24px); }
+  background: #89c557; }
+  table.good-and-bad th:nth-child(1):before {
+    content: "\67"; }
 table.good-and-bad th:nth-child(2) {
-  background: url("../shared/images/bad.png") 1.2em 0.5em no-repeat #d1d2d4;
-  @retina-image('../shared/images/bad', 24px 24px); }
-
-table.yes-and-no th:nth-child(1) {
-  background: url("../shared/images/yes.png") 1.2em 0.5em no-repeat #89c557;
-  @retina-image('../shared/images/yes', 24px 24px); }
-table.yes-and-no th:nth-child(2) {
-  background: url("../shared/images/no.png") 1.2em 0.5em no-repeat #d1d2d4;
-  @retina-image('../shared/images/no', 24px 24px); }
-table.yes-and-no td:nth-child(2) {
+  background: #d1d2d4; }
+  table.good-and-bad th:nth-child(2):before {
+    content: "\62"; }
+table.good-and-bad td:nth-child(2) {
   background: #efefef; }
 
-table.sections th:nth-child(1) {
-  background: url("../shared/images/sections.png") 1.2em no-repeat #444444;
-  @retina-image('../shared/images/sections', 24px 24px); }
-table.sections th:nth-child(2) {
-  background: url("../shared/images/add.png") 1.2em no-repeat #41a2ba;
-  @retina-image('../shared/images/add', 24px 24px); }
-table.sections h2 {
-  font-family: "source_sans_prosemibold", sans-serif;
-  color: #41a2ba;
-  font-size: 0.95em;
-  margin: 0; }
+table.yes-and-no th:nth-child(1) {
+  background: #89c557; }
+  table.yes-and-no th:nth-child(1):before {
+    content: "\79"; }
+table.yes-and-no th:nth-child(2) {
+  background: #d1d2d4; }
+  table.yes-and-no th:nth-child(2):before {
+    content: "\e606"; }
+table.yes-and-no td:nth-child(2) {
+  background: #efefef; }
 
 blockquote {
   font-family: "source_sans_proitalic", sans-serif;

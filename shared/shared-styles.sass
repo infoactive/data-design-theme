@@ -49,14 +49,19 @@ $color-names: blue yellow green violet red
 
 h2 
   margin-top: 2em
-  margin-bottom: .5em
+  margin-bottom: 2em
   &.avoid
+    background: $gray
     font-size: 1em
     color: white
-    padding: .7em 0 .7em 3em
+    padding: .7em 1em
     text-transform: uppercase
-    background: url('../shared/images/no.png') 1em 50% no-repeat $gray
-    @retina-image('../shared/images/no', 20px 20px)
+    &:before
+      font-family: "icons"
+      content: "\e606"
+      margin-right: 1em
+      top: 2px
+      position: relative
 
 h4
   font-family: 'source_sans_probold', sans-serif
@@ -82,15 +87,15 @@ table.question-and-answer,
 table.good-and-bad,
   th
     font-size: 1em
-    padding: .3em 1em .5em
+    padding: .5em .5em .5em 1.3em
     text-transform: uppercase
     padding-top: -3px
     &:before
       font-family: "icons"
-      font-size: 1.5em
-      margin-right: .6em
-      top: 6px
+      margin-right: .9em
       position: relative
+      font-size: 1em
+      top: 2px
   tr
     background: transparent
   td, th
@@ -101,13 +106,19 @@ table.good-and-bad,
     padding: 1.3em 1.5em
 
 table.question-and-answer
+  th
+    padding: .3em 1em .5em
+    &:before
+      font-size: 1.5em
+      top: 6px
+      margin-right: .6em
   th:nth-child(1)
     &:before
       content: "\e608"
     background: #444
   th:nth-child(2)
     &:before
-      content: "\e600"
+      content: "\e60f"
     background: $blue
   td
     padding: 1.5em
@@ -126,11 +137,13 @@ table.question-and-answer
 table.good-and-bad
   th:nth-child(1)
     &:before
-      content: "\67"
+      content: "\e604"
+      font-family: icons
+      speak: none
     background: $green
   th:nth-child(2)
     &:before
-      content: "\62"
+      content: "\e605"
     background: $gray
   td:nth-child(2)
     background: $light-gray
@@ -139,7 +152,7 @@ table.good-and-bad
 table.yes-and-no
   th:nth-child(1)
     &:before
-      content: "\79"
+      content: "\e607"
     background: $green
   th:nth-child(2)
     &:before
@@ -190,10 +203,17 @@ div[data-type="sidebar"]
   padding: 15px 40px 20px 40px
 
 div[data-type="warning"]
-  background: url("../shared/images/warning.png") 1.6em 1.8em no-repeat $light-gray
-  @retina-image('../shared/images/warning', 50px 50px)
   border-top: 12px solid $red      
-  padding-left: 110px
+  padding-left: 0
+  &:before
+    font-family: "icons"
+    content: "\e609"
+    color: $red
+    font-size: 3em
+    margin: 15px 0 0 26px
+    float: left
+  p, h1, h2, h3, ul
+    margin-left: 110px
 
 div[data-type="note"], 
 div[data-type="warning"]
