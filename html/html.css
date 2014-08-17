@@ -601,15 +601,6 @@ section[data-type="chapter"] header {
       font-size: 0.9em;
       margin-bottom: 3em; }
 
-p[data-type="author"] {
-  color: #aaaaaa;
-  font-size: 0.9em;
-  margin-bottom: 3em;
-  text-transform: uppercase; }
-  p[data-type="author"] em {
-    font-family: "source_sans_prolight", sans-serif;
-    color: #cccccc; }
-
 section[data-type="titlepage"] {
   background: url("../../images/cover.png") bottom repeat-x #41a2ba;
   min-height: 800px; }
