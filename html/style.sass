@@ -40,6 +40,13 @@ html
   font-style: normal
 
 @font-face
+  font-family: 'source_sans_prosemibold'
+  src: url('../fonts/sourcesanspro-semibold-webfont.eot')
+  src: url('../fonts/sourcesanspro-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/sourcesanspro-semibold-webfont.woff') format('woff'), url('../fonts/sourcesanspro-semibold-webfont.ttf') format('truetype'), url('../fonts/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold') format('svg')
+  font-weight: normal
+  font-style: normal
+
+@font-face
   font-family: 'source_sans_prolight'
   src: url('../fonts/sourcesanspro-light-webfont.eot')
   src: url('../fonts/sourcesanspro-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/sourcesanspro-light-webfont.woff') format('woff'), url('../fonts/sourcesanspro-light-webfont.ttf') format('truetype'), url('../fonts/sourcesanspro-light-webfont.svg#source_sans_prolight') format('svg')
@@ -165,20 +172,18 @@ nav[data-type="toc"]
     position: relative
     cursor: pointer
     &:before
-      content: ""
-      width: 14px
-      height: 10px
+      content: "\e60c"
+      font-family: "icons"
+      font-size: 1.6em
       position: absolute
-      top: 24px
       left: 88%
       display: block
-      opacity: .2
-      background: url('../../images/shared-icons/open-drawer.png') 90% 50% no-repeat
-      @retina-image('../../images/shared-icons/open-drawer', 14px 10px)
+      opacity: .3
       @include transition-property(transform)
       @include transition-duration(.3s)
     &.open:before
       @include transform(rotate(180deg))
+      @include transform-origin(center center)
       @include transition-property(transform)
       @include transition-duration(.3s)
     &:hover:before
@@ -545,7 +550,7 @@ div.navbar
     width: 320px
     z-index: 12
   h1
-    font-family: 'source_sans_prosemibold'
+    font-family: 'source_sans_probold'
     text-transform: uppercase
     font-size: 1.7em
     float: left
