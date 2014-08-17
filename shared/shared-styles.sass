@@ -82,8 +82,15 @@ table.question-and-answer,
 table.good-and-bad,
   th
     font-size: 1em
-    padding: .5em 1.5em .5em 3.2em
+    padding: .3em 1em .5em
     text-transform: uppercase
+    padding-top: -3px
+    &:before
+      font-family: "icons"
+      font-size: 1.5em
+      margin-right: .6em
+      top: 6px
+      position: relative
   tr
     background: transparent
   td, th
@@ -96,14 +103,12 @@ table.good-and-bad,
 table.question-and-answer
   th:nth-child(1)
     &:before
-      content: "q"
-      font-family: "icons"
+      content: "\e608"
     background: #444
-    //background: url('../shared/images/search.png') 1.2em .5em no-repeat #444
-    //@retina-image('../shared/images/search', 24px 24px)
   th:nth-child(2)
-    background: url('../shared/images/arrow.png') 1.2em .5em no-repeat $blue
-    @retina-image('../shared/images/arrow', 24px 24px)
+    &:before
+      content: "\e600"
+    background: $blue
   td
     padding: 1.5em
     padding-bottom: 1em
@@ -120,35 +125,29 @@ table.question-and-answer
 
 table.good-and-bad
   th:nth-child(1)
-    background: url('../shared/images/good.png') 1.2em .5em no-repeat $green
-    @retina-image('../shared/images/good', 24px 24px)
+    &:before
+      content: "\67"
+    background: $green
   th:nth-child(2)
-    background: url('../shared/images/bad.png') 1.2em .5em no-repeat $gray
-    @retina-image('../shared/images/bad', 24px 24px)
-
-table.yes-and-no
-  th:nth-child(1)
-    background: url('../shared/images/yes.png') 1.2em .5em no-repeat $green
-    @retina-image('../shared/images/yes', 24px 24px)
-  th:nth-child(2)
-    background: url('../shared/images/no.png') 1.2em .5em no-repeat $gray
-    @retina-image('../shared/images/no', 24px 24px)
-  td
+    &:before
+      content: "\62"
+    background: $gray
   td:nth-child(2)
     background: $light-gray
 
-table.sections
+
+table.yes-and-no
   th:nth-child(1)
-    background: url('../shared/images/sections.png') 1.2em no-repeat #444
-    @retina-image('../shared/images/sections', 24px 24px)
+    &:before
+      content: "\79"
+    background: $green
   th:nth-child(2)
-    background: url('../shared/images/add.png') 1.2em no-repeat $blue
-    @retina-image('../shared/images/add', 24px 24px)
-  h2
-    font-family: 'source_sans_prosemibold', sans-serif
-    color: $blue
-    font-size: .95em
-    margin: 0
+    &:before
+      content: "\e606"
+    background: $gray
+  td
+  td:nth-child(2)
+    background: $light-gray
 
 // blockquotes
 

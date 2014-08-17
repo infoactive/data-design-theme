@@ -1,7 +1,13 @@
+@font-face
+  font-family: 'icons'
+  src: url('../fonts/icomoon.eot')
+  src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('../fonts/icomoon.woff') format('woff'), url('../fonts/icomoon.ttf') format('truetype'), url('../fonts/icomoon.svg#icomoon') format('svg')
+  font-weight: normal
+  font-style: normal
+
 @import 'bourbon/bourbon'
 @import 'neat/neat'
 @import '../shared/shared-styles'
-
 
 * 
   -moz-box-sizing: border-box 
@@ -47,12 +53,7 @@ html
   font-weight: normal
   font-style: normal
 
-@font-face
-  font-family: 'icons'
-  src: url('../fonts/icomoon.eot')
-  src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('../fonts/icomoon.woff') format('woff'), url('../fonts/icomoon.ttf') format('truetype'), url('../fonts/icomoon.svg#icomoon') format('svg')
-  font-weight: normal
-  font-style: normal
+
 
 p, dd
   font-family: 'source_sans_proregular', sans-serif
@@ -894,3 +895,77 @@ section[data-type="acknowledgments"]
   width: 150px
   height: 150px
   margin: 45px
+
+table.yes-and-no,
+table.question-and-answer,
+table.good-and-bad,
+  th
+    font-size: 1em
+    padding: .3em 1em .5em
+    text-transform: uppercase
+    padding-top: -3px
+    &:before
+      font-family: "icons"
+      font-size: 1.5em
+      margin-right: .6em
+      top: 6px
+      position: relative
+  tr
+    background: transparent
+  td, th
+    white-space: normal
+    p
+      font-size: 1em
+  td
+    padding: 1.3em 1.5em
+
+table.question-and-answer
+  th:nth-child(1)
+    &:before
+      content: "\e608"
+    background: #444
+  th:nth-child(2)
+    &:before
+      content: "\e600"
+    background: $blue
+  td
+    padding: 1.5em
+    padding-bottom: 1em
+  td:nth-child(2)
+    p
+      color: #999
+    h2
+      font-family: 'source_sans_prosemibold', sans-serif
+      color: $blue
+      font-size: 1em
+      margin: 0
+      + p
+        margin-top: 0
+
+table.good-and-bad
+  th:nth-child(1)
+    &:before
+      content: "\67"
+      font-family: icons
+      speak: none
+    background: $green
+  th:nth-child(2)
+    &:before
+      content: "\62"
+    background: $gray
+  td:nth-child(2)
+    background: $light-gray
+
+
+table.yes-and-no
+  th:nth-child(1)
+    &:before
+      content: "\79"
+    background: $green
+  th:nth-child(2)
+    &:before
+      content: "\e606"
+    background: $gray
+  td
+  td:nth-child(2)
+    background: $light-gray
