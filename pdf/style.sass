@@ -298,15 +298,12 @@ nav[data-type="toc"]
       > a
         border-bottom: none
         font-family: "source_sans_probold", sans-serif
-    &[data-type="chapter"], &[data-type="appendix"], &[data-type="glossary"], &[data-type="index"], &[data-type="preface"]
+    &[data-type="chapter"], &[data-type="appendix"], &[data-type="glossary"], &[data-type="index"], &[data-type="preface"], &[data-type="foreword"], &[data-type="introduction"], &[data-type="appendix"], &[data-type="glossary"], &[data-type="acknowledgments"]      
+      font-family: "source_sans_proregular", sans-serif
       font-size: 9.5pt
       margin-top: 14.4pt
       display: list-item
       page-break-after: avoid
-    &[data-type="preface"], &[data-type="foreword"], &[data-type="introduction"]
-      font-family: "source_sans_proregular", sans-serif
-      font-size: 9.5pt
-      display: list-item
     &[data-type="chapter"] > a:after, &[data-type="appendix"] > a:after, &[data-type="index"] > a:after, &[data-type="glossary"] > a:after
       content: leader(space) target-counter(" ", page)
     &[data-type="preface"] > a:after, &[data-type="foreword"] > a:after, &[data-type="introduction"] > a:after
