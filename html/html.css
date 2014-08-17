@@ -269,10 +269,10 @@ div[data-type="sidebar"] {
 div[data-type="warning"] {
   border-top: 12px solid #cf4627;
   padding-left: 0; }
-  div[data-type="warning"]:before {
+  div[data-type="warning"] .icon:before {
     font-family: "icons";
-    content: "\e609";
     color: #cf4627;
+    content: attr(data-icon);
     font-size: 3em;
     margin: 15px 0 0 26px;
     float: left; }

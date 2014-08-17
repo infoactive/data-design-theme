@@ -269,7 +269,7 @@ div[data-type="sidebar"] {
 div[data-type="warning"] {
   border-top: 12px solid #cf4627;
   padding-left: 0; }
-  div[data-type="warning"]:before {
+  div[data-type="warning"] .warning-icon:before {
     font-family: "icons";
     content: "\e609";
     color: #cf4627;
@@ -277,7 +277,7 @@ div[data-type="warning"] {
     margin: 15px 0 0 26px;
     float: left; }
   div[data-type="warning"] p, div[data-type="warning"] h1, div[data-type="warning"] h2, div[data-type="warning"] h3, div[data-type="warning"] ul {
-    margin-left: 110px; }
+    margin-left: 100px; }
 
 div[data-type="note"] h1,
 div[data-type="warning"] h1 {
@@ -958,6 +958,8 @@ figure div.border-box {
 div[data-type="warning"] {
   border-top: 8pt solid #cf4627;
   font-size: 11.5pt; }
+  div[data-type="warning"] p, div[data-type="warning"] h1, div[data-type="warning"] h2, div[data-type="warning"] h3 {
+    margin-top: 0; }
 div[data-type="note"], div[data-type="warning"] {
   page-break-inside: avoid; }
 div[data-type="note"] p, div[data-type="warning"] p {
@@ -1090,7 +1092,7 @@ p[data-type="author"] {
     font-style: normal; }
 
 h2 {
-  margin-bottom: 10pt; }
+  margin-bottom: 0pt; }
   h2.avoid {
     font-size: 12pt;
     color: white;
