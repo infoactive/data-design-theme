@@ -269,7 +269,7 @@ div[data-type="sidebar"] {
 div[data-type="warning"] {
   border-top: 12px solid #cf4627;
   padding-left: 0; }
-  div[data-type="warning"] .warning-icon:before {
+  div[data-type="warning"]:before {
     font-family: "icons";
     content: "\e609";
     color: #cf4627;
