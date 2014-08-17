@@ -693,7 +693,6 @@ div
   &[data-type="warning"]
     border-top: 8pt solid #cf4627
     font-size: 11.5pt
-    padding-left: 72pt
   &[data-type="note"], &[data-type="warning"]
     page-break-inside: avoid
   &[data-type="note"] p, &[data-type="warning"] p
@@ -734,6 +733,7 @@ p[data-type="attribution"]
 /* contributors
 
 section[data-type="acknowledgments"]
+  page-break-before: always
   max-width: 7in
 
   *
@@ -768,12 +768,13 @@ section[data-type="acknowledgments"]
         color: #aaa
 
   .contributor
-    width: 2.5in
+    page-break-inside: avoid
+    width: 5.5in
     margin: 0 .1in
     display: inline-block
     margin-bottom: 28px
     position: relative
-    height: 300px
+    height: auto
     background: #f4f4f4
     float: left
     overflow: hidden
@@ -787,31 +788,17 @@ section[data-type="acknowledgments"]
     margin-right: .7em
   
   .description
-    float: left
-    max-height: 270px
-    overflow: hidden
+    margin-top: 18pt
     p 
       padding: 16px
       line-height: 1.2em
-      font-size: .8em
-    .links
-      position: absolute
-      bottom: 0
-      right: 0
-      width: 100%
+      font-size: 10pt
+    .links 
+      padding: 0 16pt 16pt
       a
-        margin: 0 10px 10px 0
-        width: 28px
-        height: 29px
-        display: block
-        float: right
-        text-indent: -9999px
         opacity: .4
-        background: url('../shared/images/website.png')
-        &:hover
-          opacity: 1
-      .twitter
-        background: url('../shared/images/twitter.png')
+        color: $blue
+        margin-right: 8pt
 
   .role
     float: left
@@ -855,5 +842,3 @@ h2
     color: white
     padding: 10pt 0 8pt 3em
     text-transform: uppercase
-    background: url('../shared/images/no.png') 1em 50% no-repeat $gray
-    @retina-image('../shared/images/no', 20px 20px)
