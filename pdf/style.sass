@@ -289,7 +289,7 @@ nav[data-type="toc"]
     margin-left: 0
     text-align: left
   ol
-    margin-left: 0
+    margin-left: 14pt
   li
     a, span
       text-decoration: none
@@ -299,7 +299,7 @@ nav[data-type="toc"]
       > a
         border-bottom: none
         font-family: "source_sans_probold", sans-serif
-    &[data-type="chapter"], &[data-type="appendix"], &[data-type="glossary"], &[data-type="index"]
+    &[data-type="chapter"], &[data-type="appendix"], &[data-type="glossary"], &[data-type="index"], &[data-type="preface"]
       font-family: "source_sans_prosemibold", sans-serif
       font-size: 9.5pt
       font-weight: 600
@@ -317,22 +317,11 @@ nav[data-type="toc"]
       font-weight: 600
     &[data-type="preface"] > a:after, &[data-type="foreword"] > a:after, &[data-type="introduction"] > a:after
       content: leader(space) " " target-counter(" ", page)
-    &[data-type="preface"] li
-      &[data-type="sect1"], &[data-type="sect2"]
-        /* and appendix
-        display: none
-    &[data-type="foreword"] li
-      &[data-type="sect1"], &[data-type="sect2"]
-        /* and appendix
-        display: none
-    &[data-type="appendix"] li
-      &[data-type="sect1"], &[data-type="sect2"]
-        /* and appendix
-        display: none
     &[data-type="chapter"]:before
       content: "CHAPTER " counter(ChapterNumberTOC, decimal) ": "
       counter-increment: ChapterNumberTOC
       border-bottom: 1px solid $gray
+      font-family: "source_sans_proregular", sans-serif
 
 /* appendixes
 

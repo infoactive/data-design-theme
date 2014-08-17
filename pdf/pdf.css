@@ -577,7 +577,7 @@ nav[data-type="toc"] {
     margin-left: 0;
     text-align: left; }
   nav[data-type="toc"] ol {
-    margin-left: 0; }
+    margin-left: 14pt; }
   nav[data-type="toc"] li a, nav[data-type="toc"] li span {
     text-decoration: none;
     border-bottom: 1px solid #d1d2d4; }
@@ -586,7 +586,7 @@ nav[data-type="toc"] {
     nav[data-type="toc"] li[data-type="part"] > a {
       border-bottom: none;
       font-family: "source_sans_probold", sans-serif; }
-  nav[data-type="toc"] li[data-type="chapter"], nav[data-type="toc"] li[data-type="appendix"], nav[data-type="toc"] li[data-type="glossary"], nav[data-type="toc"] li[data-type="index"] {
+  nav[data-type="toc"] li[data-type="chapter"], nav[data-type="toc"] li[data-type="appendix"], nav[data-type="toc"] li[data-type="glossary"], nav[data-type="toc"] li[data-type="index"], nav[data-type="toc"] li[data-type="preface"] {
     font-family: "source_sans_prosemibold", sans-serif;
     font-size: 9.5pt;
     font-weight: 600;
@@ -604,19 +604,11 @@ nav[data-type="toc"] {
     font-weight: 600; }
   nav[data-type="toc"] li[data-type="preface"] > a:after, nav[data-type="toc"] li[data-type="foreword"] > a:after, nav[data-type="toc"] li[data-type="introduction"] > a:after {
     content: leader(space) " " target-counter(" ", page); }
-  nav[data-type="toc"] li[data-type="preface"] li[data-type="sect1"], nav[data-type="toc"] li[data-type="preface"] li[data-type="sect2"] {
-    /* and appendix */
-    display: none; }
-  nav[data-type="toc"] li[data-type="foreword"] li[data-type="sect1"], nav[data-type="toc"] li[data-type="foreword"] li[data-type="sect2"] {
-    /* and appendix */
-    display: none; }
-  nav[data-type="toc"] li[data-type="appendix"] li[data-type="sect1"], nav[data-type="toc"] li[data-type="appendix"] li[data-type="sect2"] {
-    /* and appendix */
-    display: none; }
   nav[data-type="toc"] li[data-type="chapter"]:before {
     content: "CHAPTER " counter(ChapterNumberTOC,decimal) ": ";
     counter-increment: ChapterNumberTOC;
-    border-bottom: 1px solid #d1d2d4; }
+    border-bottom: 1px solid #d1d2d4;
+    font-family: "source_sans_proregular", sans-serif; }
 
 /* appendixes */
 nav[data-type="toc"] li[data-type="appendix"] {
