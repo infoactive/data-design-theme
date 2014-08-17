@@ -95,8 +95,12 @@ table.good-and-bad,
 
 table.question-and-answer
   th:nth-child(1)
-    background: url('../shared/images/search.png') 1.2em .5em no-repeat #444
-    @retina-image('../shared/images/search', 24px 24px)
+    &:before
+      content: "q"
+      font-family: "icons"
+    background: #444
+    //background: url('../shared/images/search.png') 1.2em .5em no-repeat #444
+    //@retina-image('../shared/images/search', 24px 24px)
   th:nth-child(2)
     background: url('../shared/images/arrow.png') 1.2em .5em no-repeat $blue
     @retina-image('../shared/images/arrow', 24px 24px)
