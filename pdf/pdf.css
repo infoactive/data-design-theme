@@ -1049,11 +1049,10 @@ section[data-type="acknowledgments"] {
       line-height: 1.2em;
       font-size: 10pt; }
     section[data-type="acknowledgments"] .description .links {
-      padding: 0 8pt 16pt; }
+      padding: 0 16pt 16pt; }
       section[data-type="acknowledgments"] .description .links a {
         opacity: 0.4;
-        color: #41a2ba;
-        margin-left: 8pt; }
+        color: #41a2ba; }
   section[data-type="acknowledgments"] .role {
     float: left;
     width: 100%; }
@@ -1091,7 +1090,7 @@ p[data-type="author"] {
     font-style: normal; }
 
 h2 {
-  margin-bottom: 30pt; }
+  margin-bottom: 10pt; }
   h2.avoid {
     font-size: 12pt;
     color: white;
