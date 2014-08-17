@@ -1049,11 +1049,11 @@ section[data-type="acknowledgments"] {
       line-height: 1.2em;
       font-size: 10pt; }
     section[data-type="acknowledgments"] .description .links {
-      padding: 0 16pt 16pt; }
+      padding: 0 8pt 16pt; }
       section[data-type="acknowledgments"] .description .links a {
         opacity: 0.4;
         color: #41a2ba;
-        margin-right: 8pt; }
+        margin-left: 8pt; }
   section[data-type="acknowledgments"] .role {
     float: left;
     width: 100%; }
@@ -1095,5 +1095,6 @@ h2 {
   h2.avoid {
     font-size: 12pt;
     color: white;
-    padding: 10pt 0 8pt 3em;
+    margin-bottom: 50pt;
+    padding: 10pt 0 8pt 1em;
     text-transform: uppercase; }
