@@ -587,21 +587,16 @@ nav[data-type="toc"] {
       border-bottom: none;
       font-family: "source_sans_probold", sans-serif; }
   nav[data-type="toc"] li[data-type="chapter"], nav[data-type="toc"] li[data-type="appendix"], nav[data-type="toc"] li[data-type="glossary"], nav[data-type="toc"] li[data-type="index"], nav[data-type="toc"] li[data-type="preface"] {
-    font-family: "source_sans_prosemibold", sans-serif;
     font-size: 9.5pt;
-    font-weight: 600;
     margin-top: 14.4pt;
     display: list-item;
     page-break-after: avoid; }
   nav[data-type="toc"] li[data-type="preface"], nav[data-type="toc"] li[data-type="foreword"], nav[data-type="toc"] li[data-type="introduction"] {
     font-family: "source_sans_prosemibold", sans-serif;
-    font-style: italic;
     font-size: 9.5pt;
-    font-weight: 600;
     display: list-item; }
   nav[data-type="toc"] li[data-type="chapter"] > a:after, nav[data-type="toc"] li[data-type="appendix"] > a:after, nav[data-type="toc"] li[data-type="index"] > a:after, nav[data-type="toc"] li[data-type="glossary"] > a:after {
-    content: leader(space) target-counter(" ", page);
-    font-weight: 600; }
+    content: leader(space) target-counter(" ", page); }
   nav[data-type="toc"] li[data-type="preface"] > a:after, nav[data-type="toc"] li[data-type="foreword"] > a:after, nav[data-type="toc"] li[data-type="introduction"] > a:after {
     content: leader(space) " " target-counter(" ", page); }
   nav[data-type="toc"] li[data-type="chapter"]:before {
@@ -676,20 +671,10 @@ section[data-type="sect1"] > h1 {
   /* A-heads are also displayed in chapter footers */ }
 section[data-type="preface"] {
   page: preface;
-  /* forces the preface to start on a right hand page */
-  counter-reset: FigureNumber TableNumber ExampleNumber EquationNumber footnote;
-  /* setting auto-numbers for figures, tables, and footnotes to start at 1 */ }
-  section[data-type="preface"] > h1 {
-    font-size: 16pt;
-    font-weight: normal; }
+  counter-reset: FigureNumber TableNumber ExampleNumber EquationNumber footnote; }
 section[data-type="foreword"] {
   page: foreword;
-  /* forces the foreword to start on a right hand page */
-  counter-reset: FigureNumber TableNumber ExampleNumber EquationNumber footnote;
-  /* setting auto-numbers for figures, tables, and footnotes to start at 1 */ }
-  section[data-type="foreword"] > h1 {
-    font-size: 16pt;
-    font-weight: normal; }
+  counter-reset: FigureNumber TableNumber ExampleNumber EquationNumber footnote; }
 
 /* prefaces */
 @page preface:first {

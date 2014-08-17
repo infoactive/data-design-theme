@@ -300,21 +300,16 @@ nav[data-type="toc"]
         border-bottom: none
         font-family: "source_sans_probold", sans-serif
     &[data-type="chapter"], &[data-type="appendix"], &[data-type="glossary"], &[data-type="index"], &[data-type="preface"]
-      font-family: "source_sans_prosemibold", sans-serif
       font-size: 9.5pt
-      font-weight: 600
       margin-top: 14.4pt
       display: list-item
       page-break-after: avoid
     &[data-type="preface"], &[data-type="foreword"], &[data-type="introduction"]
       font-family: "source_sans_prosemibold", sans-serif
-      font-style: italic
       font-size: 9.5pt
-      font-weight: 600
       display: list-item
     &[data-type="chapter"] > a:after, &[data-type="appendix"] > a:after, &[data-type="index"] > a:after, &[data-type="glossary"] > a:after
       content: leader(space) target-counter(" ", page)
-      font-weight: 600
     &[data-type="preface"] > a:after, &[data-type="foreword"] > a:after, &[data-type="introduction"] > a:after
       content: leader(space) " " target-counter(" ", page)
     &[data-type="chapter"]:before
@@ -395,23 +390,11 @@ section
     string-set: SectionTitle self
     /* A-heads are also displayed in chapter footers
   &[data-type="preface"]
-    > h1
-      font-size: 16pt
-      font-weight: normal
     page: preface
-    //page-break-before: right
-    /* forces the preface to start on a right hand page
     counter-reset: FigureNumber TableNumber ExampleNumber EquationNumber footnote
-    /* setting auto-numbers for figures, tables, and footnotes to start at 1
   &[data-type="foreword"]
-    > h1
-      font-size: 16pt
-      font-weight: normal
     page: foreword
-    //page-break-before: right
-    /* forces the foreword to start on a right hand page
     counter-reset: FigureNumber TableNumber ExampleNumber EquationNumber footnote
-    /* setting auto-numbers for figures, tables, and footnotes to start at 1
 
 /* prefaces
 
