@@ -350,9 +350,6 @@ figcaption {
   src: url("../shared/fonts/sourcesanspro-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../shared/fonts/sourcesanspro-italic-webfont.woff") format("woff"), url("../shared/fonts/sourcesanspro-italic-webfont.ttf") format("truetype"), url("../shared/fonts/sourcesanspro-italic-webfont.svg#source_sans_proitalic") format("svg");
   font-weight: normal;
   font-style: normal; }
-section[data-type="sect1"] {
-  border-top: 18px solid #d1d2d4; }
-
 .icon {
   width: 240px;
   height: 240px;
@@ -519,7 +516,7 @@ section[data-type="titlepage"] {
     section[data-type="titlepage"] .credits p {
       text-align: center;
       color: #d1d2d4;
-      width: 80%;
+      width: 90%;
       margin: 12pt auto; }
 
 /* styling and positioning for author names */
@@ -555,39 +552,21 @@ section[data-type="chapter"] {
         page-break-after: always; }
 
 /* paged media */
-@page toc:first {
-  @bottom-right-corner {
-    content: counter(page,lower-roman); }
-  @top-right {
-    content: none; } }
-@page toc {
-  @bottom-left-corner {
-    content: counter(page,lower-roman); }
-  @top-left {
-    content: "Table of Contents"; } }
-@page toc:blank {
-  @bottom-left-corner {
-    content: none; }
-  @bottom-right-corner {
-    content: none; }
-  @top-right {
-    content: none; }
-  @top-left {
-    content: none; } }
 nav[data-type="toc"] {
-  /* table of contents is a series of nested lists in a nav element */
   page: toc;
   page-break-before: right;
   font-variant: tabular-nums;
   hyphens: none;
   counter-reset: ChapterNumberTOC PartNumberTOC AppendixNumberTOC; }
   nav[data-type="toc"] > h1 {
-    /* table of contents heading */
-    font-size: 16pt;
+    font-family: "source_sans_probold", sans-serif;
     line-height: 22pt;
-    margin-top: 87pt;
-    margin-bottom: 77pt;
-    text-align: right; }
+    margin-bottom: 0.5in;
+    margin-top: 0.5in;
+    text-align: left;
+    font-size: 32pt;
+    text-transform: uppercase;
+    color: #d1d2d4; }
   nav[data-type="toc"] a {
     font-weight: normal;
     color: cmyk(0%, 0%, 0%, 100%);
@@ -599,6 +578,14 @@ nav[data-type="toc"] {
     text-align: left; }
   nav[data-type="toc"] ol {
     margin-left: 0; }
+  nav[data-type="toc"] li a, nav[data-type="toc"] li span {
+    text-decoration: none;
+    border-bottom: 1px solid #d1d2d4; }
+  nav[data-type="toc"] li[data-type="part"] {
+    margin-top: 20pt; }
+    nav[data-type="toc"] li[data-type="part"] > a {
+      border-bottom: none;
+      font-family: "source_sans_probold", sans-serif; }
   nav[data-type="toc"] li[data-type="chapter"], nav[data-type="toc"] li[data-type="appendix"], nav[data-type="toc"] li[data-type="glossary"], nav[data-type="toc"] li[data-type="index"] {
     font-family: "source_sans_prosemibold", sans-serif;
     font-size: 9.5pt;
@@ -606,21 +593,17 @@ nav[data-type="toc"] {
     margin-top: 14.4pt;
     display: list-item;
     page-break-after: avoid; }
-  nav[data-type="toc"] li[data-type="preface"], nav[data-type="toc"] li[data-type="foreword"] {
+  nav[data-type="toc"] li[data-type="preface"], nav[data-type="toc"] li[data-type="foreword"], nav[data-type="toc"] li[data-type="introduction"] {
     font-family: "source_sans_prosemibold", sans-serif;
     font-style: italic;
     font-size: 9.5pt;
     font-weight: 600;
     display: list-item; }
   nav[data-type="toc"] li[data-type="chapter"] > a:after, nav[data-type="toc"] li[data-type="appendix"] > a:after, nav[data-type="toc"] li[data-type="index"] > a:after, nav[data-type="toc"] li[data-type="glossary"] > a:after {
-    content: leader(space) " " target-counter(attr(href, url), page);
+    content: leader(space) target-counter(" ", page);
     font-weight: 600; }
-  nav[data-type="toc"] li[data-type="sect1"] a:after, nav[data-type="toc"] li[data-type="sect2"] a:after {
-    content: leader(space) target-counter(attr(href, url), page);
-    margin-right: -0.25in;
-    /* for long lines */ }
-  nav[data-type="toc"] li[data-type="preface"] > a:after, nav[data-type="toc"] li[data-type="foreword"] > a:after {
-    content: leader(space) " " target-counter(attr(href, url), page, lower-roman); }
+  nav[data-type="toc"] li[data-type="preface"] > a:after, nav[data-type="toc"] li[data-type="foreword"] > a:after, nav[data-type="toc"] li[data-type="introduction"] > a:after {
+    content: leader(space) " " target-counter(" ", page); }
   nav[data-type="toc"] li[data-type="preface"] li[data-type="sect1"], nav[data-type="toc"] li[data-type="preface"] li[data-type="sect2"] {
     /* and appendix */
     display: none; }
@@ -632,25 +615,8 @@ nav[data-type="toc"] {
     display: none; }
   nav[data-type="toc"] li[data-type="chapter"]:before {
     content: "CHAPTER " counter(ChapterNumberTOC,decimal) ": ";
-    counter-increment: ChapterNumberTOC; }
-
-/* global styles for the table of contents */
-li[data-type="sect1"], li[data-type="sect2"] {
-  font-family: "source_sans_proregular", sans-serif;
-  font-size: 9.5pt;
-  font-weight: normal;
-  page-break-after: auto;
-  margin-bottom: 5pt;
-  margin-top: 5pt;
-  /* otherwise, cascades from above */ }
-li[data-type="sect1"] {
-  padding-left: 24pt;
-  text-indent: -12pt;
-  padding-right: 0.25in;
-  /* for long lines; cascades to sect2s */ }
-li[data-type="sect2"] {
-  padding-left: 0.12in;
-  margin-left: 0; }
+    counter-increment: ChapterNumberTOC;
+    border-bottom: 1px solid #d1d2d4; }
 
 /* appendixes */
 nav[data-type="toc"] li[data-type="appendix"] {
@@ -664,7 +630,7 @@ nav[data-type="toc"] li[data-type="appendix"] {
 
 /* preface, chapter, and appendix headings */
 /* shared styles for all chapter-level headings */
-section[data-type="preface"] > h1, section[data-type="foreword"] > h1, section[data-type="appendix"] > h1 {
+section[data-type="preface"] > h1, section[data-type="foreword"] > h1, section[data-type="appendix"] > h1, section[data-type="introduction"], section[data-type="copyright-page"] {
   font-family: "source_sans_probold", sans-serif;
   line-height: 22pt;
   margin-bottom: 0.25in;
@@ -672,7 +638,7 @@ section[data-type="preface"] > h1, section[data-type="foreword"] > h1, section[d
   text-align: left;
   font-size: 32pt;
   text-transform: uppercase;
-  color: #aaaaaa; }
+  color: #d1d2d4; }
 section[data-type="preface"] > h1, section[data-type="foreword"] > h1 {
   string-set: ChapterTitle self; }
 section[data-type="chapter"] > h1, section[data-type="chapter"] > header > h1 {
@@ -1023,38 +989,6 @@ div[data-type="example"] h5 {
 p[data-type="attribution"] {
   text-align: right;
   margin-top: 6pt; }
-
-/* math */
-div[data-type="equation"] {
-  margin: 12pt 0 12pt 0.167in; }
-
-@namespace mml "http://www.w3.org/1998/Math/MathML";
-mml|math {
-  font-size: 12pt; }
-
-div[data-type="equation"] h5 {
-  -ah-float: outside page;
-  clear: both;
-  margin: 0 -1.25in;
-  padding-top: 5pt;
-  border-top: solid 0.5pt cmyk(0%, 0%, 0%, 100%);
-  width: 1in;
-  page-break-inside: avoid;
-  text-align: left;
-  font-style: italic;
-  font-size: 7.5pt;
-  line-height: 10pt;
-  hyphens: none; }
-  div[data-type="equation"] h5:before {
-    font-family: "source_sans_probold", sans-serif;
-    font-style: normal;
-    font-size: 8.5pt;
-    counter-increment: EquationNumber;
-    content: "EQUATION " counter(ChapterNumber) "-" counter(EquationNumber);
-    display: block;
-    margin-bottom: 7.2pt; }
-div.hard-pagebreak {
-  page-break-after: always; }
 
 /* ------------------- PAGEBREAK HANDLING ------------------- */
 /* force a page break */
