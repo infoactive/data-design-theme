@@ -1,6 +1,5 @@
 @charset "UTF-8"
 
-
 @font-face
   font-family: 'icons'
   src: url('../shared/fonts/icomoon.eot')
@@ -368,7 +367,10 @@ section
   &[data-type="appendix"] > h1:after
     content: counter(AppendixNumber, upper-alpha)
 
-/* chapter and appendix headings include auto-numbering
+section[data-type="copyright-page"]
+  h2
+    margin-bottom: 20pt
+    margin-top: 0
 
 /* section headings
 
