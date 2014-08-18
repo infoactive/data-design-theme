@@ -255,7 +255,8 @@ blockquote p {
 blockquote p[data-type="attribution"] {
   text-align: right;
   font-size: 0.85em;
-  margin-top: 1em; }
+  margin-top: 1em;
+  margin-bottom: 0; }
 
 div[data-type="note"],
 div[data-type="warning"],
